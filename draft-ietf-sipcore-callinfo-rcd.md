@@ -4,7 +4,7 @@ abbrev: "Call-Info Rich Call Data"
 category: std
 
 docname: draft-ietf-sipcore-callinfo-rcd-latest
-submissiontype: IETF  
+submissiontype: IETF
 number:
 date:
 consensus: true
