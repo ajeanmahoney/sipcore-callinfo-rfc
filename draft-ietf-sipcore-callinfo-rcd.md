@@ -25,7 +25,7 @@ author:
  -
     fullname: Your Name Here
     organization: Your Organization Here
-    email: your.email@example.com
+    email: "jmahoney@amsl.com"
 
 normative:
 
