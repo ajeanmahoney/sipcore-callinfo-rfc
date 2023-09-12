@@ -80,7 +80,7 @@ In this document we provide a framework for the use of Call-Info header field to
 
 The first purpose value defined is "rcd-jcard" and is used to associate rich call data related to the identity of the calling party in the form of a jCard {{RFC7095}}. While there is a "card" token that is defined in {{RFC3261}} with what could be considered overlapping purposes, the specific intent of the use of "rcd-jcard" is for the profile of jCard defined in this document for use in Call-Info for Rich Call Data. The choice of jCard in this specification is guided by two things. First, JSON has become the default and is generally the widely accepted optimally supported format for transmission, parsing, and manipulation of data on IP networks and jCard represents an extensible method of providing information about a person or business associated with a call. Second, jCard has also been defined in {{I-D.ietf-stir-passport-rcd}} and has been adopted by PASSporT {{RFC8225}} because of the usage of JSON Web Tokens (JWT) {{RFC7519}}.
 
-A parameter for "call-reason" is to be used to provide a string or other object that is used to convey the intent or reason the caller is calling to help the called party understand better the context and intent of the call and why they may want to answer the call.    
+A parameter for "call-reason" is to be used to provide a string or other object that is used to convey the intent or reason the caller is calling to help the called party understand better the context and intent of the call and why they may want to answer the call.
 
 # A Call-Info framework for carrying Rich Call Data
 
@@ -90,11 +90,11 @@ There are a number of Rich Call Data information that can use the Call-Info head
 
 The Rich Call Data framework both defined in this document as well as in {{I-D.ietf-stir-passport-rcd}} are call specific information. The insertion of Rich Call Data is intended to be singular in that the receiving party should not be required to make any call specific decisions on redundant, duplicate, or conflicting Rich Call Data it would not be in the position to make. With the use of Call-Info for the transmission of Rich Call Data, any Rich Call Data related information defined in this specification or future specifications that extend this mechanism MUST be contained in a single Call-Info header field containing all URI and purpose tokens and parameters related to Rich Call Data. The Rich Call Data information is intended to be added by a party that is authoritative over that information or it has been translated from a verified STIR RCD PASSporT unmodified once in a trusted domain. Any additional parties involved in the call path SHOULD NOT generally modify the Call-Info or add additional Call-Info header fields related to Rich Call Data. The insertion of the RCD Call-Info header field should be considered a trusted action based on trusted information and the information SHOULD NOT be considered modifiable as a best practice.
 
-As discussed in {{I-D.ietf-stir-passport-rcd}}, calling name is already covered in {{RFC3261}} using the display-name component of the From header field value of the request, alternatively for some calls this may come from the P-Asserted-ID header {{RFC3325}}.  This is out of scope for Call-Info header field so will not be covered in this document further. 
+As discussed in {{I-D.ietf-stir-passport-rcd}}, calling name is already covered in {{RFC3261}} using the display-name component of the From header field value of the request, alternatively for some calls this may come from the P-Asserted-ID header {{RFC3325}}.  This is out of scope for Call-Info header field so will not be covered in this document further.
 
 For logos or icons that can represent the calling party the "icon" purpose token is defined in {{RFC3261}} and is intended to be used for defining a URI to reference an image resource that can be displayed to the user that receives the SIP request.  For the purpose of this document and the transmission of Rich Call Data, this purpose token should be used as defined.  There is some high level guidance provided later in the document around some of the image formatting and related information.
 
-Call reason is a new parameter that this document defines as a string with a new Call-Info header field parameter.  jCard is another more comprehensive and extensible mechanism defined in the STIR Rich Call Data framework. While {{RFC3261}} does have a "card" purpose token, the intent of defining a new "rcd-jcard" purpose token is to specifically use the JSON jCard {{RFC7095}} and provide specific guidance in this document for the use and non-use of the attributes of the jCard specification specific to describing the calling party in a communications session as well as some of the security considerations around that information.  Both of these are specifically defined in the next sections. 
+Call reason is a new parameter that this document defines as a string with a new Call-Info header field parameter.  jCard is another more comprehensive and extensible mechanism defined in the STIR Rich Call Data framework. While {{RFC3261}} does have a "card" purpose token, the intent of defining a new "rcd-jcard" purpose token is to specifically use the JSON jCard {{RFC7095}} and provide specific guidance in this document for the use and non-use of the attributes of the jCard specification specific to describing the calling party in a communications session as well as some of the security considerations around that information.  Both of these are specifically defined in the next sections.
 
 # "rcd-jcard" Call-Info Token
 
@@ -102,9 +102,9 @@ The use of the Call-Info Token "rcd-jcard" is for the purpose of supporting RCD 
 
 The Call-Info header field is defined to include a URI, where here the resource pointed to by the URI is a jCard JSON object {{RFC7095}}. The MIME media type set for the JSON text MUST be set as application/json with a default encoding of UTF-8 {{RFC4627}}. This MAY be carried directly in the Call-Info header field URI using the "data" URI scheme. A jCard also MAY be carried in the body of the SIP request bearing this Call-Info via the "cid" URI scheme {{RFC2392}}. Alternatively, the URI MUST define the use HTTPS or a transport that can validate the integrity of the source of the resource as well as the transport channel through which the resource is retrieved. If in the specific deployment environment of SIP, the source or integrity of the Rich Call Data information can not be trusted, than the use of the STIR RCD framework defined in {{I-D.ietf-stir-passport-rcd}} should be considered.
 
-The jCard is intended to be used to contain multiple info about the calling party.  A call and its corresponding single Rich Call Data related Call-Info header MUST only contain a single "rcd-jcard" token.  
+The jCard is intended to be used to contain multiple info about the calling party.  A call and its corresponding single Rich Call Data related Call-Info header MUST only contain a single "rcd-jcard" token.
 
-The fields like "fn", "photo", or "logo" if used with the use of "icon" calling name in FROM or P-Asserted-ID header or purpose token, as described in the previous section, MUST either match or be avoided to allow the called party to clearly determine the intended calling name or icon.  
+The fields like "fn", "photo", or "logo" if used with the use of "icon" calling name in FROM or P-Asserted-ID header or purpose token, as described in the previous section, MUST either match or be avoided to allow the called party to clearly determine the intended calling name or icon.
 
 An example of a Call-Info header field is:
 
@@ -135,12 +135,12 @@ Via: SIP/2.0/TLS pc33.atlanta.example.com;branch=z9hG4bKnashds8
 To: Alice <sip:alice@example.com>
 From: Bob <sip:12155551000@example.com;user=phone>;tag=1928301774>
 Call-ID: a84b4c76e66710
-Call-Info: <data:application/json,["vcard",[["version",{},"text", 
-"4.0"],["fn",{},"text","Q Branch"],["org",{},"text","MI6;Q Branch 
-Spy Gadgets"],["photo",{},"uri","https://example.com/photos/quart 
-ermaster-256x256.png"],["logo",{},"uri","https://example.com/log  
+Call-Info: <data:application/json,["vcard",[["version",{},"text",
+"4.0"],["fn",{},"text","Q Branch"],["org",{},"text","MI6;Q Branch
+Spy Gadgets"],["photo",{},"uri","https://example.com/photos/quart
+ermaster-256x256.png"],["logo",{},"uri","https://example.com/log
 os/mi6-256x256.jpg"],["logo",{},"uri","https://example.com/logos/
-mi6-64x64.jpg"]]]\>;purpose=rcd-jcard;call-reason="Rendezvous for 
+mi6-64x64.jpg"]]]\>;purpose=rcd-jcard;call-reason="Rendezvous for
 Little Nellie"
 CSeq: 314159 INVITE
 Max-Forwards: 70
@@ -204,7 +204,7 @@ This specification also defines the use of a new parameter intended to extend th
 
 A new parameter of the Call-Info header is defined called "call-reason". The "call-reason" parameter is intended to convey a short textual message suitable for display to an end user during call alerting. As a general guideline, this message SHOULD be no longer than 64 characters; displays that support this specification may be forced to truncate messages that cannot fit onto a screen. This message conveys the caller's intention in contacting the callee. It is an optional parameter, and the sender of a SIP request cannot guarantee that its display will be supported by the terminating endpoint. The manner in which this reason is set by the caller is outside the scope of this specification.
 
-One alternative approach would be to use the baseline {{RFC3261}} Subject header field value to convey the reason for the call. Because the Subject header has seen little historical use in SIP implementations, however, and its specification describes its potential use in filtering, it seems more prudent to define a new means of carrying a call reason indication. 
+One alternative approach would be to use the baseline {{RFC3261}} Subject header field value to convey the reason for the call. Because the Subject header has seen little historical use in SIP implementations, however, and its specification describes its potential use in filtering, it seems more prudent to define a new means of carrying a call reason indication.
 
 An example of a Call-Info header field value with the "call-reason" parameter follows:
 
@@ -243,11 +243,11 @@ When one or more URIs are used in a jCard, it is important to note that any URI 
 
 With the use of the purpose token "icon" or for the cases where jCards incorporate URIs or directly include via Base64 encoding of digital images and sounds. We specify a few recommended conventions to facilitate more consistent support of the successful decoding and rendering of these images or media formats.
 
-For images, such as for the photo and logo properties, the default image formats SHOULD be png or jpg. These files are mostly commonly used to support 24-bit RGB images which should consequently be the default.  There are some older telephone devices that may only support bmp type of images with lower bit-range (e.g. 16-bit or 8-bit or 1-bit), also with potentially only grayscale or 1-bit black and white color displays.  These exceptions are should considered optional to support or even recommended not to support and at least at the time of writing this document are becoming increasingly rare (i.e. typically displays on devices are either color or color-aware graphical displays that support png or jpg formats or exclusively textual displays). 
+For images, such as for the photo and logo properties, the default image formats SHOULD be png or jpg. These files are mostly commonly used to support 24-bit RGB images which should consequently be the default.  There are some older telephone devices that may only support bmp type of images with lower bit-range (e.g. 16-bit or 8-bit or 1-bit), also with potentially only grayscale or 1-bit black and white color displays.  These exceptions are should considered optional to support or even recommended not to support and at least at the time of writing this document are becoming increasingly rare (i.e. typically displays on devices are either color or color-aware graphical displays that support png or jpg formats or exclusively textual displays).
 
 In addition, vector images are increasingly popular in their use for icons and the need for scalable images without having to send multiple resolutions. SVG format and a minimum of support for {{W3C-SVGTiny1.2}} specifically appropriate for this specification has gained wide support as of the writing of this document, as a common format for vector images and should be supported as an additional default format for devices that support this specification.
 
-For the cases where image files are referenced by URIs as file resources, this document defines a character string that SHOULD be concatenated on to the end of a file name, before the file extension that signals the height and width of the image to the end device for the convenience of determining the appropriate resolution to retrieve without the need to retrieve all the image files. It is also recommended that images are square ratio formatted with equal height and width and with a power of two value for the number of pixels (e.g. 32x32, 128x128, 512x512). The format of the string should be "filename-HxW" where filename represents the unique string representing the file and H represents the height in pixels and W represents the width in pixels.  
+For the cases where image files are referenced by URIs as file resources, this document defines a character string that SHOULD be concatenated on to the end of a file name, before the file extension that signals the height and width of the image to the end device for the convenience of determining the appropriate resolution to retrieve without the need to retrieve all the image files. It is also recommended that images are square ratio formatted with equal height and width and with a power of two value for the number of pixels (e.g. 32x32, 128x128, 512x512). The format of the string should be "filename-HxW" where filename represents the unique string representing the file and H represents the height in pixels and W represents the width in pixels.
 
 It is appropriate and useful to include multiple versions of images or sounds so that endpoints that may not support all formats or resolutions can select the format they support.  The convention that is RECOMMENDED is that files that refer to the same content should use the same filename portion.  If it is an image format that has a specific resolution, the HxW portion of the filename should correspond to the pixel resolution. The file extension should reference the file type (e.g. filename.png, filename.svg, or filename.jpg) or (e.g. filename-32x32.png, filename-64x64.png, filename.svg, filename-32x32.jpg, or filename-64x64.jpg).
 
