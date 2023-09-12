@@ -2,6 +2,7 @@
 title: SIP Call-Info Parameters for Rich Call Data
 abbrev: Call-Info Rich Call Data
 docname: draft-ietf-sipcore-callinfo-rcd-latest
+submissiontype: IETF
 category: std
 
 ipr: trust200902
