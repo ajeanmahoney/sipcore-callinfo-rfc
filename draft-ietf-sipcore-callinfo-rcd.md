@@ -485,7 +485,7 @@ Example:
 
 ### "org" property
 
-The "org" property has the intent of specifying the organizational name and units of the object the jCard represents. Reference {{RFC6350, Section 6.6.2}}.
+The "org" property has the intent of specifying the organizational name and units of the object the jCard represents. Reference {{RFC6350, Section 6.6.4}}.
 
 Value type:  A single structured text value consisting of components separated by the SEMICOLON character (U+003B).
 
