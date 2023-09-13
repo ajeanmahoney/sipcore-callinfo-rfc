@@ -91,7 +91,7 @@ There are a number of Rich Call Data information that can use the Call-Info head
 
 The Rich Call Data framework both defined in this document as well as in {{I-D.ietf-stir-passport-rcd}} are call specific information. The insertion of Rich Call Data is intended to be singular in that the receiving party should not be required to make any call specific decisions on redundant, duplicate, or conflicting Rich Call Data it would not be in the position to make. With the use of Call-Info for the transmission of Rich Call Data, any Rich Call Data related information defined in this specification or future specifications that extend this mechanism MUST be contained in a single Call-Info header field containing all URI and purpose tokens and parameters related to Rich Call Data. The Rich Call Data information is intended to be added by a party that is authoritative over that information or it has been translated from a verified STIR RCD PASSporT unmodified once in a trusted domain. Any additional parties involved in the call path SHOULD NOT generally modify the Call-Info or add additional Call-Info header fields related to Rich Call Data. The insertion of the RCD Call-Info header field should be considered a trusted action based on trusted information and the information SHOULD NOT be considered modifiable as a best practice.
 
-As discussed in {{I-D.ietf-stir-passport-rcd}}, calling name is already covered in {{RFC3261}} using the display-name component of the From header field value of the request, alternatively for some calls this may come from the P-Asserted-ID header {{RFC3325}}.  This is out of scope for Call-Info header field so will not be covered in this document further.
+As discussed in {{I-D.ietf-stir-passport-rcd}}, calling name is already covered in {{RFC3261}} using the display-name component of the From header field value of the request, alternatively for some calls this may come from the P-Asserted-ID header field {{RFC3325}}.  This is out of scope for Call-Info header field so will not be covered in this document further.
 
 For logos or icons that can represent the calling party the "icon" purpose token is defined in {{RFC3261}} and is intended to be used for defining a URI to reference an image resource that can be displayed to the user that receives the SIP request.  For the purpose of this document and the transmission of Rich Call Data, this purpose token should be used as defined.  There is some high level guidance provided later in the document around some of the image formatting and related information.
 
@@ -103,9 +103,9 @@ The use of the Call-Info Token "rcd-jcard" is for the purpose of supporting RCD 
 
 The Call-Info header field is defined to include a URI, where here the resource pointed to by the URI is a jCard JSON object {{RFC7095}}. The MIME media type set for the JSON text MUST be set as application/json with a default encoding of UTF-8 {{RFC4627}}. This MAY be carried directly in the Call-Info header field URI using the "data" URI scheme. A jCard also MAY be carried in the body of the SIP request bearing this Call-Info via the "cid" URI scheme {{RFC2392}}. Alternatively, the URI MUST define the use HTTPS or a transport that can validate the integrity of the source of the resource as well as the transport channel through which the resource is retrieved. If in the specific deployment environment of SIP, the source or integrity of the Rich Call Data information can not be trusted, than the use of the STIR RCD framework defined in {{I-D.ietf-stir-passport-rcd}} should be considered.
 
-The jCard is intended to be used to contain multiple info about the calling party.  A call and its corresponding single Rich Call Data related Call-Info header MUST only contain a single "rcd-jcard" token.
+The jCard is intended to be used to contain multiple info about the calling party.  A call and its corresponding single Rich Call Data related Call-Info header field MUST only contain a single "rcd-jcard" token.
 
-The fields like "fn", "photo", or "logo" if used with the use of "icon" calling name in FROM or P-Asserted-ID header or purpose token, as described in the previous section, MUST either match or be avoided to allow the called party to clearly determine the intended calling name or icon.
+The fields like "fn", "photo", or "logo" if used with the use of "icon" calling name in FROM or P-Asserted-ID header field or purpose token, as described in the previous section, MUST either match or be avoided to allow the called party to clearly determine the intended calling name or icon.
 
 An example of a Call-Info header field is:
 
@@ -203,9 +203,9 @@ ri","https://example.com/logos/mi6-256x256.jpg"],["logo",{},"uri",
 
 This specification also defines the use of a new parameter intended to extend the overall content of the Rich Call Data related Call-Info header field.  This parameter, as other parameters may be defined in the future, is intended to be separate and distinct from the other URI and purpose tokens that may proceed these parameters.
 
-A new parameter of the Call-Info header is defined called "call-reason". The "call-reason" parameter is intended to convey a short textual message suitable for display to an end user during call alerting. As a general guideline, this message SHOULD be no longer than 64 characters; displays that support this specification may be forced to truncate messages that cannot fit onto a screen. This message conveys the caller's intention in contacting the callee. It is an optional parameter, and the sender of a SIP request cannot guarantee that its display will be supported by the terminating endpoint. The manner in which this reason is set by the caller is outside the scope of this specification.
+A new parameter of the Call-Info header field is defined called "call-reason". The "call-reason" parameter is intended to convey a short textual message suitable for display to an end user during call alerting. As a general guideline, this message SHOULD be no longer than 64 characters; displays that support this specification may be forced to truncate messages that cannot fit onto a screen. This message conveys the caller's intention in contacting the callee. It is an optional parameter, and the sender of a SIP request cannot guarantee that its display will be supported by the terminating endpoint. The manner in which this reason is set by the caller is outside the scope of this specification.
 
-One alternative approach would be to use the baseline {{RFC3261}} Subject header field value to convey the reason for the call. Because the Subject header has seen little historical use in SIP implementations, however, and its specification describes its potential use in filtering, it seems more prudent to define a new means of carrying a call reason indication.
+One alternative approach would be to use the baseline {{RFC3261}} Subject header field value to convey the reason for the call. Because the Subject header field has seen little historical use in SIP implementations, however, and its specification describes its potential use in filtering, it seems more prudent to define a new means of carrying a call reason indication.
 
 An example of a Call-Info header field value with the "call-reason" parameter follows:
 
@@ -601,7 +601,7 @@ We would like to thank David Hancock, Alec Fenichel and other members of the SIP
 
 ## SIP Call-Info Header Field Purpose Token Request
 
-[this RFC] defines the "rcd-jcard" as a new value for the "purpose" parameter in the Call-Info header in the "Header Field Parameters and Parameter Values" registry defined by {{RFC3968}}.
+[this RFC] defines the "rcd-jcard" as a new value for the "purpose" parameter in the Call-Info header field in the "Header Field Parameters and Parameter Values" registry defined by {{RFC3968}}.
 
 ~~~~~~~
   +--------------+----------------+-------------------+----------------+
@@ -613,7 +613,7 @@ We would like to thank David Hancock, Alec Fenichel and other members of the SIP
 
 ## SIP Call-Info Header Field Purpose Token Request
 
-[this RFC] defines the "call-reason" generic parameter for use as a new parameter in the Call-Info header in the "Header Field Parameters and Parameter Values" registry defined by [RFC3968]. The parameter's token is "call-reason" and it takes the value of a quoted string.
+[this RFC] defines the "call-reason" generic parameter for use as a new parameter in the Call-Info header field in the "Header Field Parameters and Parameter Values" registry defined by [RFC3968]. The parameter's token is "call-reason" and it takes the value of a quoted string.
 
 # Security Considerations {#Security}
 
