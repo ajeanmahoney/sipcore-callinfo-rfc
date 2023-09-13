@@ -593,10 +593,6 @@ Example:
 
 Part of the intent of the usage of jCard is that it has its own extensibility properties where new properties can be defined to relay newly defined information related to a caller.  This capability is inherently supported as part of standard extensibility.  However, usage of those new properties should be published and registered following {{RFC7095, Section 3.6}} or new specifications.
 
-# Acknowledgements
-
-We would like to thank David Hancock, Alec Fenichel and other members of the SIPCORE and STIR working group for helpful suggestions and comments for the creation of this draft.
-
 # IANA Considerations {#IANA}
 
 ## SIP Call-Info Header Field Purpose Token Request
@@ -622,3 +618,7 @@ Revealing information such as the name, location, and affiliation of a person ne
 The security framework of signing and providing integrity to this data should be followed {{I-D.ietf-stir-passport-rcd}}, with the idea that the use of constraints and other certificate based associations should be considered. This includes considerations around information about the calling party being generally constant vs per call data being more temporal. This also includes the relationship that certificates with constraints presents to how they relate to each other and how that information is managed, protected, and associated with the correct call corresponding to a calling party.
 
 --- back
+
+# Acknowledgements {: numbered="false"}
+
+We would like to thank David Hancock, Alec Fenichel and other members of the SIPCORE and STIR working group for helpful suggestions and comments for the creation of this draft.
