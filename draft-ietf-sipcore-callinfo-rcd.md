@@ -619,6 +619,7 @@ The security framework of signing and providing integrity to this data should be
 
 --- back
 
-# Acknowledgements {: numbered="false"}
+# Acknowledgements {#Acknowledgements}
+{: numbered="false"}
 
 We would like to thank David Hancock, Alec Fenichel and other members of the SIPCORE and STIR working group for helpful suggestions and comments for the creation of this draft.
