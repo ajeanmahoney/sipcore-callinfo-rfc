@@ -83,7 +83,7 @@ The first purpose value defined is "rcd-jcard" and is used to associate rich cal
 
 A parameter for "call-reason" is to be used to provide a string or other object that is used to convey the intent or reason the caller is calling to help the called party understand better the context and intent of the call and why they may want to answer the call.
 
-# A Call-Info framework for carrying Rich Call Data
+# A Call-Info Framework for Carrying Rich Call Data
 
 This specification is intended to extend the Call-Info header field to be compatible and complimentary to the Rich Call Data framework defined in {{I-D.ietf-stir-passport-rcd}}. In general, a SIP based call involves multiple hops that transition between different trusted and untrusted network relationships. The STIR framework {{RFC7340}} is intended to address the protection of the carriage of different call information and identities over untrusted network relationships that wasn't addressed when the SIP specifications were originally defined.  Call-Info, as defined in {{RFC3261}} Section 20.9, is the defined mechanism for carrying call and caller related information and also defines procedures for defining new purpose tokens. This document will discuss the use of both existing tokens and define new purpose tokens to correspond to the Rich Call Data framework.
 
@@ -221,7 +221,7 @@ Call-Info: <data:>;purpose=rcd-jcard;
   call-reason="For your ears only"
 ~~~~~~~~~~~
 
-# Examples and usage of Call-Info for Rich Call Data
+# Examples and Usage of Call-Info for Rich Call Data
 
 The procedures for the usage of the purpose tokens and URIs should generally follow the procedures defined in {{RFC3261}}. So, as an example, if there is a jCard and icon with a call reason, the following example shows the use of multiple purpose and parameters in the the Call-Info header field.
 
@@ -232,7 +232,7 @@ Call-Info: <https://example.com/jbond.json>;purpose=rcd-jcard,
 ~~~~~~~~~~~
 
 
-# Usage of jCard and property specific usage
+# Usage of jCard and Property-Specific Usage
 
 Beyond the definition of the specific properties or JSON arrays associated with each property. This specification defines a few rules above and beyond {{RFC7095}} specific to the use of jCard for Call-Info and Rich Call Data making sure there is a minimum level of supported properties that every implementation of this specification should adhere to. This includes support for interpreting the value of this property and the ability to render in some appropriate form the display capabilities of common telephone devices, as well as apps, and also includes requirements specific to either textual displays and graphics capable displays.
 
@@ -240,7 +240,7 @@ Beyond the definition of the specific properties or JSON arrays associated with 
 
 When one or more URIs are used in a jCard, it is important to note that any URI referenced data, with the exception of the top-level usage of "jcl" as a URI to the jCard itself (unless updated by any future extensions of this specification) MUST NOT contain any URI references. In other words, the jCard can have URI references as defined in the jCard specification and this document, but the content referenced by those URIs MUST NOT have any URIs, and therefore MUST be enforced by the client to not follow those URI references or not render that content to the user if any URI are present in that specific URI linked content. The purpose of this is to control the security and more specifically align with the content integrity mechanism defined in {{I-D.ietf-stir-passport-rcd}}. It is the belief of the authors that there isn't a scenario that deeper URI references would be required or even supported by the current set of properties for the typical use of jCard properties, but because jCard is extensible, this rule is set to restrict further extension without the proper consideration of security and integrity properties of both Call-Info usage as well as the Rich Call Data and STIR signing of the data {{I-D.ietf-stir-passport-rcd}}, {{RFC8224}}.
 
-## Usage of multimedia data in jCard or with icon
+## Usage of Multimedia Data in jCard or with Icon
 
 With the use of the purpose token "icon" or for the cases where jCards incorporate URIs or directly include via Base64 encoding of digital images and sounds. We specify a few recommended conventions to facilitate more consistent support of the successful decoding and rendering of these images or media formats.
 
@@ -271,10 +271,10 @@ Property cardinalities are indicated, for convenience, using the following notat
   +-------------+--------------------------------------------------+
 ~~~~~~~~~~~
 
-## Identification properties
+## Identification Properties
 These types are used to capture information associated with the identification and naming of the entity associated with the jCard. They are initially defined in {{RFC6350}}, but the following list of properties included and repeated in this Section is a subset of the properties defined for jCard with properties selected for this document that have relevance to telephone and messaging applications. jCard is an extensible object and therefore, there may also be future specifications that extend the set of properties that may be relevant to the set of communications applications that utilize this specification.
 
-### "fn" property
+### "fn" Property
 
 The "fn" property has the intent of providing a formatted text corresponding to the name of the object the jCard represents.  Reference {{RFC6350}} Section 6.2.1.
 
@@ -287,7 +287,7 @@ Example:
 ["fn", {}, "text", "Mr. John Q. Public\, Esq."]
 ~~~~~~~~~~~~
 
-### "n" property
+### "n" Property
 
 The "n" property has the intent of providing the components of the name of the object the jCard represents. Reference {{RFC6350}} Section 6.2.2.
 
@@ -301,7 +301,7 @@ Example:
 ["n", {}, "text", "Stevenson;John;Philip,Paul;Dr.;Jr.,M.D.,A.C.P."]
 ~~~~~~~~~~~~
 
-### "nickname" property
+### "nickname" Property
 
 The "nickname" property has the intent of providing the text corresponding to the nickname of the object the jCard represents. Reference {{RFC6350}} Section 6.2.3.
 
@@ -316,7 +316,7 @@ Example:
 ["nickname", {}, "text", "TYPE=work:Boss"]
 ~~~~~~~~~~~~
 
-### "photo" property
+### "photo" Property
 
 The "photo" property has the intent of supplying an image or photograph information that annotates some aspect of the object the jCard represents. Reference {{RFC6350}} Section 6.2.4.
 
@@ -335,7 +335,7 @@ Example:
 
 These properties are concerned with information related to the delivery addressing or label for the jCard object.
 
-### "adr" property
+### "adr" Property
 
 The "adr" property has the intent of providing the delivery address of the object the jCard represents. Reference {{RFC6350}} Section 6.3.1.
 
@@ -354,7 +354,7 @@ Example:
 
 These properties describe information about how to communicate with the object the jCard represents.
 
-### "tel" property
+### "tel" Property
 
 The "tel" property has the intent of providing the telephone number for telephony communication of the object the jCard represents. Reference {{RFC6350}} Section 6.4.1.
 
@@ -373,7 +373,7 @@ Example:
 ["tel", { "type": ["fax"] }, "uri", "tel:+1-202-555-1001"]
 ~~~~~~~~~~~~
 
-### "email" property
+### "email" Property
 
 The "email" property has the intent of providing the electronic mail address for communication of the object the jCard represents. Reference {{RFC6350}} Section 6.4.2.
 
@@ -387,7 +387,7 @@ Example:
 ["email", {"pref":"1"}, "text", "jane_doe@example.com"]
 ~~~~~~~~~~~~
 
-### "lang" property
+### "lang" Property
 
 The "lang" property has the intent of providing the language(s) that may be used for contacting of the object the jCard represents. Reference {{RFC6350}} Section 6.4.4.
 
@@ -406,7 +406,7 @@ Example:
 
 These properties are concerned with information associated with geographical positions or regions associated with the object the jCard represents.
 
-### "tz" property
+### "tz" Property
 
 The "tz" property has the intent of providing the time zone of the object the jCard represents. Reference {{RFC6350}} Section 6.5.1.
 
@@ -422,7 +422,7 @@ Example:
 ["tz", {}, "text", "Raleigh/North America"]
 ~~~~~~~~~~~~
 
-### "geo" property
+### "geo" Property
 
 The "geo" property has the intent of providing the global positioning of the object the jCard represents. Reference {{RFC6350}} Section 6.5.2.
 
@@ -439,7 +439,7 @@ Example:
 
 These properties are concerned with information associated with characteristics of the organization or organizational units of the object that the jCard represents.
 
-### "title" property
+### "title" Property
 
 The "title" property has the intent of providing the position or job of the object the jCard represents. Reference {{RFC6350}} Section 6.6.1.
 
@@ -452,7 +452,7 @@ Example:
 ["title", {}, "text", "Research Scientist"]
 ~~~~~~~~~~~~
 
-### "role" property
+### "role" Property
 
 The "role" property has the intent of providing the position or job of the object the jCard represents. Reference {{RFC6350}} Section 6.6.2.
 
@@ -465,7 +465,7 @@ Example:
 ["role", {}, "text", "Project Leader"]
 ~~~~~~~~~~~~
 
-### "logo" property
+### "logo" Property
 
 The "logo" property has the intent of specifying a graphic image of a logo associated with the object the jCard represents. Reference {{RFC6350}} Section 6.6.3.
 
@@ -483,7 +483,7 @@ Example:
       <...the remainder of base64-encoded data...>"]
 ~~~~~~~~~~~~
 
-### "org" property
+### "org" Property
 
 The "org" property has the intent of specifying the organizational name and units of the object the jCard represents. Reference {{RFC6350}} Section 6.6.2.
 
@@ -500,7 +500,7 @@ Example:
 
 These properties are concerned with additional explanations, such as that related to informational notes or revisions specific to the jCard.
 
-### "categories" property
+### "categories" Property
 
 The "categories" property has the intent of specifying application category information about the object the jCard represents. Reference {{RFC6350}} Section 6.7.1.
 
@@ -516,7 +516,7 @@ Example:
 ["categories", {}, "text", "INTERNET,IETF,INDUSTRY"]
 ~~~~~~~~~~~~
 
-### "note" property
+### "note" Property
 
 The "note" property has the intent of specifying supplemental information or a comment about the object the jCard represents. Reference {{RFC6350}} Section 6.7.2.
 
@@ -530,7 +530,7 @@ Example:
              EST\, Mon-Fri."]
 ~~~~~~~~~~~~
 
-### "sound" property
+### "sound" Property
 
 The "sound" property has the intent of specifying a digital sound content information that annotates some aspect of the object the jCard represents. This property is often used to specify the proper pronunciation of the name property value of the jCard. Reference {{RFC6350}} Section 6.7.5.
 
@@ -548,7 +548,7 @@ Example:
       <...the remainder of base64-encoded data...>"]
 ~~~~~~~~~~~~
 
-### "uid" property
+### "uid" Property
 
 The "uid" property has the intent of specifying a globally unique identifier corresponding to the object the jCard represents. Reference {{RFC6350}} Section 6.7.6.
 
@@ -561,7 +561,7 @@ Example:
 ["uid", {}, "uri", "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6"]
 ~~~~~~~~~~~~
 
-### "url" property
+### "url" Property
 
 The "url" property has the intent of specifying a uniform resource locator associated with the object the jCard represents. Reference {{RFC6350}} Section 6.7.8.
 
@@ -576,7 +576,7 @@ Example:
 ["url", {}, "uri", "https://example.org/french-rest/chezchic.html"]
 ~~~~~~~~~~~~
 
-### "version" property
+### "version" Property
 
 The "version" property MUST be included and is intended to specify the version of the vCard specification used to format this vCard. Reference {{RFC6350}} Section 6.7.9.
 
