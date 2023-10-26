@@ -1,0 +1,259 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-10-26T00:41:08.451350+00:00",
+  "repo": "ajeanmahoney/sipcore-callinfo-rfc",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOKSSJls5aLQf5",
+      "title": "add submissiontype: IETF",
+      "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/1",
+      "state": "MERGED",
+      "author": "ajeanmahoney",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "the scripts complain otherwise",
+      "createdAt": "2023-09-12T22:27:05Z",
+      "updatedAt": "2023-09-12T22:27:52Z",
+      "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "baseRefName": "main",
+      "baseRefOid": "14c7e8d6cb8ac287e45ce8f20b7baab06b51f87e",
+      "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "headRefName": "ajeanmahoney-patch-1",
+      "headRefOid": "27cbe36c43ed2a435d24ad700d93e5f27906b578",
+      "closedAt": "2023-09-12T22:27:49Z",
+      "mergedAt": "2023-09-12T22:27:49Z",
+      "mergedBy": "ajeanmahoney",
+      "mergeCommit": {
+        "oid": "6aed509b7f4915c5234d8a24da0644710f8d5de5"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOKSSJls5aPrQZ",
+      "title": "Fixes to capitalization in section headings",
+      "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/2",
+      "state": "MERGED",
+      "author": "ajeanmahoney",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Per [RFC Style Guide](https://www.rfc-editor.org/rfc/rfc7322#section-3.4)",
+      "createdAt": "2023-09-13T14:52:46Z",
+      "updatedAt": "2023-09-13T16:53:15Z",
+      "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "baseRefName": "main",
+      "baseRefOid": "66a24e1d546340663b7699ff559bee99d56ca25e",
+      "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "headRefName": "heading-capitalization",
+      "headRefOid": "0331df6ec821d777dd4124d8645e459fc73fcd21",
+      "closedAt": "2023-09-13T16:52:14Z",
+      "mergedAt": "2023-09-13T16:52:14Z",
+      "mergedBy": "ajeanmahoney",
+      "mergeCommit": {
+        "oid": "406fbca1e111b0754f63c1b3154231bd37a05778"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOKSSJls5aP4lI",
+      "title": "Consistent use of the term \"header field\"",
+      "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/3",
+      "state": "MERGED",
+      "author": "ajeanmahoney",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Expanded \"header\" to \"header field\" where appropriate",
+      "createdAt": "2023-09-13T15:24:10Z",
+      "updatedAt": "2023-09-13T16:52:54Z",
+      "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "baseRefName": "main",
+      "baseRefOid": "6aed509b7f4915c5234d8a24da0644710f8d5de5",
+      "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "headRefName": "header-field",
+      "headRefOid": "f55978369d0503f1302a716a5f1f7cbcfd231b86",
+      "closedAt": "2023-09-13T16:52:48Z",
+      "mergedAt": "2023-09-13T16:52:48Z",
+      "mergedBy": "ajeanmahoney",
+      "mergeCommit": {
+        "oid": "4e9d1fd6057bf7037fbfc3cda99128200d088633"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOKSSJls5aQKYC",
+      "title": "Adding cross references to sections",
+      "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/4",
+      "state": "MERGED",
+      "author": "ajeanmahoney",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "[Details on xref construction](https://github.com/cabo/kramdown-rfc/wiki/Syntax2#section-references) can be found on the kramdown-rfc wiki.",
+      "createdAt": "2023-09-13T16:12:36Z",
+      "updatedAt": "2023-09-13T16:53:30Z",
+      "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "baseRefName": "main",
+      "baseRefOid": "6aed509b7f4915c5234d8a24da0644710f8d5de5",
+      "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "headRefName": "section-xrefs",
+      "headRefOid": "f7fa3312ef53fdcb9afd4b24c038a2ddcfd0c596",
+      "closedAt": "2023-09-13T16:37:07Z",
+      "mergedAt": "2023-09-13T16:37:07Z",
+      "mergedBy": "ajeanmahoney",
+      "mergeCommit": {
+        "oid": "e30cfd38f952b37138a2c8d62ebf310844938355"
+      },
+      "comments": [
+        {
+          "author": "ajeanmahoney",
+          "authorAssociation": "OWNER",
+          "body": "Merged this PR so I can check the xrefs in the HTML output.",
+          "createdAt": "2023-09-13T16:37:15Z",
+          "updatedAt": "2023-09-13T16:37:15Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOKSSJls5aQVgj",
+      "title": "Fix to \"org\" property xref",
+      "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/5",
+      "state": "MERGED",
+      "author": "ajeanmahoney",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Original had a typo and pointed to section 6.6.2 of RFC 6350. Correct section is [6.6.4.](https://www.rfc-editor.org/rfc/rfc6350#section-6.6.4)",
+      "createdAt": "2023-09-13T16:48:01Z",
+      "updatedAt": "2023-09-13T16:49:27Z",
+      "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "baseRefName": "main",
+      "baseRefOid": "e30cfd38f952b37138a2c8d62ebf310844938355",
+      "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "headRefName": "org-xref-fix",
+      "headRefOid": "8ba6c3fb12090c9fb5123638f6f26d04d8e4386d",
+      "closedAt": "2023-09-13T16:49:24Z",
+      "mergedAt": "2023-09-13T16:49:24Z",
+      "mergedBy": "ajeanmahoney",
+      "mergeCommit": {
+        "oid": "66a24e1d546340663b7699ff559bee99d56ca25e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOKSSJls5aQdLq",
+      "title": "Move Acknowledgements section to the end",
+      "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/6",
+      "state": "MERGED",
+      "author": "ajeanmahoney",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Per [Section 4 of the RFC Style Guide](https://www.rfc-editor.org/rfc/rfc7322#section-4)",
+      "createdAt": "2023-09-13T17:13:52Z",
+      "updatedAt": "2023-09-13T17:15:05Z",
+      "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "baseRefName": "main",
+      "baseRefOid": "4e9d1fd6057bf7037fbfc3cda99128200d088633",
+      "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "headRefName": "acks-move",
+      "headRefOid": "8bdac0c6f24a6b550853d138a3bc3a0b86b527f7",
+      "closedAt": "2023-09-13T17:15:05Z",
+      "mergedAt": "2023-09-13T17:15:05Z",
+      "mergedBy": "ajeanmahoney",
+      "mergeCommit": {
+        "oid": "157798380699c1198861e6e1736db882401f35cb"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOKSSJls5aQfqt",
+      "title": "remove numbering from Acknowledgements section",
+      "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/7",
+      "state": "MERGED",
+      "author": "ajeanmahoney",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-09-13T17:21:09Z",
+      "updatedAt": "2023-09-13T17:21:41Z",
+      "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "baseRefName": "main",
+      "baseRefOid": "157798380699c1198861e6e1736db882401f35cb",
+      "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
+      "headRefName": "acks-move",
+      "headRefOid": "2f7369cad5df9a033da231d347ba98d15bba77ca",
+      "closedAt": "2023-09-13T17:21:41Z",
+      "mergedAt": "2023-09-13T17:21:41Z",
+      "mergedBy": "ajeanmahoney",
+      "mergeCommit": {
+        "oid": "dc7c9f796b7bfae48c09113ceff9a7117663bb3c"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
