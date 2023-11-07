@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-05T00:46:17.988026+00:00",
+  "timestamp": "2023-11-07T00:43:19.083716+00:00",
   "repo": "ajeanmahoney/sipcore-callinfo-rfc",
   "labels": [
     {
@@ -239,7 +239,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2023-09-13T17:21:09Z",
-      "updatedAt": "2023-09-13T17:21:41Z",
+      "updatedAt": "2023-11-05T12:41:47Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "157798380699c1198861e6e1736db882401f35cb",
