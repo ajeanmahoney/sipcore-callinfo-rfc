@@ -5,8 +5,8 @@
 Network Working Group                                           C. Wendt
 Internet-Draft                                                Somos Inc.
 Intended status: Standards Track                             J. Peterson
-Expires: 16 March 2024                                      Neustar Inc.
-                                                       13 September 2023
+Expires: 30 May 2024                                        Neustar Inc.
+                                                        27 November 2023
 
 
               SIP Call-Info Parameters for Rich Call Data
@@ -42,7 +42,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 March 2024.
+   This Internet-Draft will expire on 30 May 2024.
 
 Copyright Notice
 
@@ -125,7 +125,7 @@ Table of Contents
    parameter.  A new parameter of Call-Info designed for carrying a
    "call-reason" value.  For this document and depending on the policies
    of the communications system, calling parties could either be
-   considered the end user device, (e.g. a SIP UA), or as a network
+   considered the end user device, (e.g., a SIP UA), or as a network
    service as part of a telephone service provider.  Similarly, called
    parties could also similarly be an end user device or the network
    telephone service provider acting on behalf of the recipient of the
@@ -499,12 +499,12 @@ Table of Contents
    image formats SHOULD be png or jpg.  These files are mostly commonly
    used to support 24-bit RGB images which should consequently be the
    default.  There are some older telephone devices that may only
-   support bmp type of images with lower bit-range (e.g. 16-bit or 8-bit
-   or 1-bit), also with potentially only grayscale or 1-bit black and
-   white color displays.  These exceptions are should considered
+   support bmp type of images with lower bit-range (e.g., 16-bit or
+   8-bit or 1-bit), also with potentially only grayscale or 1-bit black
+   and white color displays.  These exceptions are should considered
    optional to support or even recommended not to support and at least
    at the time of writing this document are becoming increasingly rare
-   (i.e. typically displays on devices are either color or color-aware
+   (i.e., typically displays on devices are either color or color-aware
    graphical displays that support png or jpg formats or exclusively
    textual displays).
 
@@ -524,7 +524,7 @@ Table of Contents
    without the need to retrieve all the image files.  It is also
    recommended that images are square ratio formatted with equal height
    and width and with a power of two value for the number of pixels
-   (e.g. 32x32, 128x128, 512x512).  The format of the string should be
+   (e.g., 32x32, 128x128, 512x512).  The format of the string should be
    "filename-HxW" where filename represents the unique string
    representing the file and H represents the height in pixels and W
    represents the width in pixels.
@@ -536,8 +536,8 @@ Table of Contents
    use the same filename portion.  If it is an image format that has a
    specific resolution, the HxW portion of the filename should
    correspond to the pixel resolution.  The file extension should
-   reference the file type (e.g. filename.png, filename.svg, or
-   filename.jpg) or (e.g. filename-32x32.png, filename-64x64.png,
+   reference the file type (e.g., filename.png, filename.svg, or
+   filename.jpg) or (e.g., filename-32x32.png, filename-64x64.png,
    filename.svg, filename-32x32.jpg, or filename-64x64.jpg).
 
    Because this is a complex and often debated topic that has evolved
