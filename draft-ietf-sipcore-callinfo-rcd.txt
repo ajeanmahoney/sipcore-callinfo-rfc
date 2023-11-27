@@ -287,8 +287,8 @@ Table of Contents
 
    The Call-Info header field is defined to include a URI, where here
    the resource pointed to by the URI is a jCard JSON object [RFC7095].
-   The MIME media type set for the JSON text MUST be set as application/
-   json with a default encoding of UTF-8 [RFC4627].  This MAY be carried
+   The media type set for the JSON text MUST be set as application/json
+   with a default encoding of UTF-8 [RFC4627].  This MAY be carried
    directly in the Call-Info header field URI using the "data" URI
    scheme.  A jCard also MAY be carried in the body of the SIP request
    bearing this Call-Info via the "cid" URI scheme [RFC2392].
