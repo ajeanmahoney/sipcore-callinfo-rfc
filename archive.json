@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-12-07T00:44:54.188677+00:00",
+  "timestamp": "2023-12-10T00:49:23.660180+00:00",
   "repo": "ajeanmahoney/sipcore-callinfo-rfc",
   "labels": [
     {
@@ -260,25 +260,35 @@
       "id": "PR_kwDOKSSJls5gfSC6",
       "title": "Abbreviate Rich Call Data",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/8",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "After use in the intro. Helps with phrases like \"RCD-related Call-Info\". Based on advice here: https://www.rfc-editor.org/styleguide/part2/#exp_abbrev",
       "createdAt": "2023-11-27T22:14:16Z",
-      "updatedAt": "2023-11-27T22:14:16Z",
+      "updatedAt": "2023-12-08T15:07:12Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "67757f97f4f058da40da8606ff7b4b17a4f5e7cd",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "abbreviate-RCD",
       "headRefOid": "e4bd250006716bab1c5f023bd1c147f5a0852346",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "closedAt": "2023-12-08T15:07:12Z",
+      "mergedAt": "2023-12-08T15:07:12Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "3887aa60166725b90a4f2679a106f211fd5edc0e"
+      },
+      "comments": [
+        {
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Looks good, thanks for making that more consistent",
+          "createdAt": "2023-12-08T15:07:06Z",
+          "updatedAt": "2023-12-08T15:07:06Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -286,25 +296,35 @@
       "id": "PR_kwDOKSSJls5gfZir",
       "title": "Expand abstract to describe Call-Info updates",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/9",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "that support RCD.",
       "createdAt": "2023-11-27T22:34:46Z",
-      "updatedAt": "2023-11-27T22:34:46Z",
+      "updatedAt": "2023-12-08T15:30:35Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
-      "baseRefOid": "67757f97f4f058da40da8606ff7b4b17a4f5e7cd",
+      "baseRefOid": "3887aa60166725b90a4f2679a106f211fd5edc0e",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "abstract-update",
-      "headRefOid": "9d5c754806c04b2353e1e1335575441f62d6891c",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "1a0fc6fe6d7e7cc057254302c463ec84d002d6d0",
+      "closedAt": "2023-12-08T15:30:34Z",
+      "mergedAt": "2023-12-08T15:30:34Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "8cc19c4dae75626cb25d5a396b2766955c2ed677"
+      },
+      "comments": [
+        {
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This update is good, agree it's clearer to include the call-info updates explicitly",
+          "createdAt": "2023-12-08T15:13:13Z",
+          "updatedAt": "2023-12-08T15:13:13Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -312,25 +332,56 @@
       "id": "PR_kwDOKSSJls5gfnyx",
       "title": "Section 1 copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2023-11-27T23:28:30Z",
-      "updatedAt": "2023-11-27T23:28:30Z",
+      "updatedAt": "2023-12-08T23:49:33Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
-      "baseRefOid": "67757f97f4f058da40da8606ff7b4b17a4f5e7cd",
+      "baseRefOid": "8cc19c4dae75626cb25d5a396b2766955c2ed677",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "copyedit-section-1",
-      "headRefOid": "a9b20ff7eeb41eefc730b9467b6e45e89668c1b0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "f5fc15d5c3283c54a7d859e0672ab526cdd92b8d",
+      "closedAt": "2023-12-08T15:31:22Z",
+      "mergedAt": "2023-12-08T15:31:21Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "bd0342b29bd8d9ba98a2ce492312cc3f842be5c4"
+      },
+      "comments": [
+        {
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks for the detailed clarification of the text, it all looks good to me.",
+          "createdAt": "2023-12-08T15:16:15Z",
+          "updatedAt": "2023-12-08T15:16:15Z"
+        },
+        {
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hi Jean,\r\n\r\nI accepted the pull requests, but having trouble figuring out how to merge in the main branch.  Not sure if i should have done that for each pull request or not, i had to fix conflicts for the subsequent pull requests, but it looks like they are on new branches so i probably didn\u2019t do that the best way :) \r\n\r\nSo, help would be appreciated :)\r\n\r\n-Chris\r\n\r\n> On Nov 27, 2023, at 6:28\u202fPM, Jean Mahoney ***@***.***> wrote:\r\n> \r\n> You can view, comment on, or merge this pull request online at:\r\n> \r\n>   https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10\r\n> \r\n> Commit Summary\r\n> \r\n> a9b20ff <https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10/commits/a9b20ff7eeb41eefc730b9467b6e45e89668c1b0> Section 1 copyedit\r\n> File Changes (1\u00a0file <https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10/files>)\r\n> M draft-ietf-sipcore-callinfo-rcd.md <https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10/files#diff-fea35cf1fa7f46bb9c5fc855dc8177e21b03acfaf8a2a44d5a33f1694f6d51dc> (10)\r\n> Patch Links:\r\n> \r\n> https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10.patch\r\n> https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10.diff\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub <https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10>, or unsubscribe <https://github.com/notifications/unsubscribe-auth/AAI6LH3G7DH5SMNX67566N3YGUO2RAVCNFSM6AAAAAA74ZPA5KVHI2DSMVQWIX3LMV43ASLTON2WKOZSGAYTGMZQG42TCMA>.\r\n> You are receiving this because you are subscribed to this thread.\r\n> \r\n\r\n",
+          "createdAt": "2023-12-08T15:25:47Z",
+          "updatedAt": "2023-12-08T15:25:47Z"
+        },
+        {
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Actually i figured it out, all of the pull requests are now merged into main branch.  But maybe double check to make sure i didn\u2019t screw anything up :)\r\n\r\n-Chris\r\n\r\n> On Dec 8, 2023, at 10:25\u202fAM, Chris Wendt ***@***.***> wrote:\r\n> \r\n> Hi Jean,\r\n> \r\n> I accepted the pull requests, but having trouble figuring out how to merge in the main branch.  Not sure if i should have done that for each pull request or not, i had to fix conflicts for the subsequent pull requests, but it looks like they are on new branches so i probably didn\u2019t do that the best way :) \r\n> \r\n> So, help would be appreciated :)\r\n> \r\n> -Chris\r\n> \r\n>> On Nov 27, 2023, at 6:28\u202fPM, Jean Mahoney ***@***.***> wrote:\r\n>> \r\n>> You can view, comment on, or merge this pull request online at:\r\n>> \r\n>>   https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10\r\n>> \r\n>> Commit Summary\r\n>> \r\n>> a9b20ff <https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10/commits/a9b20ff7eeb41eefc730b9467b6e45e89668c1b0> Section 1 copyedit\r\n>> File Changes (1\u00a0file <https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10/files>)\r\n>> M draft-ietf-sipcore-callinfo-rcd.md <https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10/files#diff-fea35cf1fa7f46bb9c5fc855dc8177e21b03acfaf8a2a44d5a33f1694f6d51dc> (10)\r\n>> Patch Links:\r\n>> \r\n>> https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10.patch\r\n>> https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10.diff\r\n>> \u2014\r\n>> Reply to this email directly, view it on GitHub <https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/10>, or unsubscribe <https://github.com/notifications/unsubscribe-auth/AAI6LH3G7DH5SMNX67566N3YGUO2RAVCNFSM6AAAAAA74ZPA5KVHI2DSMVQWIX3LMV43ASLTON2WKOZSGAYTGMZQG42TCMA>.\r\n>> You are receiving this because you are subscribed to this thread.\r\n>> \r\n> \r\n\r\n",
+          "createdAt": "2023-12-08T15:33:40Z",
+          "updatedAt": "2023-12-08T15:33:40Z"
+        },
+        {
+          "author": "ajeanmahoney",
+          "authorAssociation": "OWNER",
+          "body": "@chriswendt It all looks good! \r\nYou can check the overall diff here: \r\nhttps://ajeanmahoney.github.io/sipcore-callinfo-rfc/#go.draft-ietf-sipcore-callinfo-rcd.diff",
+          "createdAt": "2023-12-08T23:49:32Z",
+          "updatedAt": "2023-12-08T23:49:32Z"
+        }
+      ],
       "reviews": []
     }
   ]
