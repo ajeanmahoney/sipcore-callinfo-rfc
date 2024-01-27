@@ -236,7 +236,7 @@ Call-Info: <https://example.com/jbond.json>;purpose=rcd-jcard,
 
 # Usage of jCard and Property-Specific Usage
 
-Beyond the definition of the specific properties or JSON arrays associated with each property. This specification defines a few rules above and beyond {{RFC7095}} specific to the use of jCard for Call-Info and RCD making sure there is a minimum level of supported properties that every implementation of this specification should adhere to. This includes support for interpreting the value of this property and the ability to render in some appropriate form the display capabilities of common telephone devices, as well as apps, and also includes requirements specific to either textual displays and graphics capable displays.
+Beyond the definition of the specific properties or JSON arrays associated with each property, this specification defines a few rules above and beyond {{RFC7095}} that are specific to the use of jCard for Call-Info and RCD to ensure there is a minimum level of supported properties to which every implementation of this specification should adhere. This includes support for interpreting the value of these properties and the ability to render in some appropriate form the display capabilities of common telephone devices as well as applications, and also includes requirements specific to textual and graphics-capable displays.
 
 ## Usage of URIs in jCard
 
