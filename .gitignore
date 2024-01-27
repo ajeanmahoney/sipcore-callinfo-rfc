@@ -12,6 +12,7 @@
 /.targets.mk
 /.venv/
 /.vscode/
+/experiments
 /lib
 /node_modules/
 /versioned/
