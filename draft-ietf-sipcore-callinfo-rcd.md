@@ -101,15 +101,15 @@ This document defines 'call-reason' as a new parameter for the Call-Info header 
 
 jCard is a comprehensive and extensible mechanism defined in the STIR RCD framework. While {{RFC3261}} specifies a "card" 'purpose' token, the intent of defining a new "rcd-jcard" 'purpose' token is to use the JSON jCard format {{RFC7095}} and to provide guidance for the use and non-use of jCard attributes to describe the calling party in a communications session as well to provide some security considerations around that information.  These topics are covered in the next sections.
 
-# "rcd-jcard" Call-Info Token
+# "rcd-jcard" Call-Info 'purpose' Token
 
-The use of the Call-Info Token "rcd-jcard" is for the purpose of supporting RCD associated with the identity of a calling party in a SIP call {{RFC3261, Section 20.9}}.  The format of a Call-Info header field when using the "rcd-jcard" is as follows.
+The Call-Info 'purpose' token "rcd-jcard" indicates support of RCD associated with the identity of a calling party in a SIP call {{RFC3261, Section 20.9}}.  The format of a Call-Info header field when using the "rcd-jcard" token is as follows.
 
-The Call-Info header field is defined to include a URI, where here the resource pointed to by the URI is a jCard JSON object {{RFC7095}}. The media type set for the JSON text MUST be set as application/json with a default encoding of UTF-8 {{RFC4627}}. This MAY be carried directly in the Call-Info header field URI using the "data" URI scheme. A jCard also MAY be carried in the body of the SIP request bearing this Call-Info via the "cid" URI scheme {{RFC2392}}. Alternatively, the URI MUST define the use HTTPS or a transport that can validate the integrity of the source of the resource as well as the transport channel through which the resource is retrieved. If in the specific deployment environment of SIP, the source or integrity of the RCD information can not be trusted, than the use of the STIR RCD framework defined in {{I-D.ietf-stir-passport-rcd}} should be considered.
+The Call-Info header field is defined to include a URI that points to a resource that is a jCard JSON object {{RFC7095}}. The media type for the JSON text MUST be set as application/json with a default encoding of UTF-8 {{RFC4627}}. This MAY be carried directly in the Call-Info header field URI using the "data" URI scheme. A jCard also MAY be carried in the body of the SIP request bearing this Call-Info header field via the "cid" URI scheme {{RFC2392}}. Alternatively, the URI MUST define the use HTTPS or a transport that can validate the integrity of the source of the resource as well as the transport channel through which the resource is retrieved. If, in the specific deployment environment of SIP, the source or integrity of the RCD information cannot be trusted, then the use of the STIR RCD framework defined in {{I-D.ietf-stir-passport-rcd}} should be considered.
 
-The jCard is intended to be used to contain multiple info about the calling party.  A call and its corresponding single RCD-related Call-Info header field MUST only contain a single "rcd-jcard" token.
+The jCard is intended to contain multiple information elements about the calling party.  A call and its corresponding single RCD-related Call-Info header field MUST only contain a single "rcd-jcard" token.
 
-The fields like "fn", "photo", or "logo" if used with the use of "icon" calling name in FROM or P-Asserted-ID header field or purpose token, as described in the previous section, MUST either match or be avoided to allow the called party to clearly determine the intended calling name or icon.
+The fields like "fn", "photo", or "logo" if used with the use of "icon" calling name in From or P-Asserted-ID header field or purpose token, as described in the previous section, MUST either match or be avoided to allow the called party to clearly determine the intended calling name or icon.
 
 An example of a Call-Info header field is:
 
@@ -117,7 +117,7 @@ An example of a Call-Info header field is:
 Call-Info: <https://example.com/qbranch.json>;purpose=rcd-jcard
 ~~~~~~~~~~~~
 
-An example contents of a URL linked jCard JSON file is shown as follows:
+An example of the contents of a URL-linked jCard JSON file is shown as follows:
 
 ~~~~~~~~~~~~
 ["vcard",
@@ -132,7 +132,7 @@ An example contents of a URL linked jCard JSON file is shown as follows:
 ]
 ~~~~~~~~~~~~
 
-An example SIP INVITE using the "data" URI scheme is as follows.
+An example SIP INVITE using the "data" URI scheme is as follows:
 
 ~~~~~~~~~~~~
 INVITE sip:alice@example.com SIP/2.0
@@ -162,7 +162,7 @@ m=audio 49172 RTP/AVP 0
 a=rtpmap:0 PCMU/8000
 ~~~~~~~~~~~~
 
-An example SIP INVITE using the "cid" URI scheme is as follows.
+An example SIP INVITE using the "cid" URI scheme is as follows:
 
 ~~~~~~~~~~~~
 INVITE sip:alice@example.com SIP/2.0
@@ -203,13 +203,13 @@ ri","https://example.com/logos/mi6-256x256.jpg"],["logo",{},"uri",
 "https://example.com/logos/mi6-64x64.jpg"]]]
 ~~~~~~~~~~~~
 
-# "call-reason" Call-Info Parameter
+# 'call-reason' Call-Info Parameter
 
-This specification also defines the use of a new parameter intended to extend the overall content of the RCD-related Call-Info header field.  This parameter, as other parameters may be defined in the future, is intended to be separate and distinct from the other URI and purpose tokens that may proceed these parameters.
+This specification defines a new parameter that extends the overall content of the RCD-related Call-Info header field.  As other parameters may be defined in the future, this parameter is intended to be separate and distinct from the other URI and 'purpose' tokens that may proceed these parameters.
 
-A new parameter of the Call-Info header field is defined called "call-reason". The "call-reason" parameter is intended to convey a short textual message suitable for display to an end user during call alerting. As a general guideline, this message SHOULD be no longer than 64 characters; displays that support this specification may be forced to truncate messages that cannot fit onto a screen. This message conveys the caller's intention in contacting the callee. It is an optional parameter, and the sender of a SIP request cannot guarantee that its display will be supported by the terminating endpoint. The manner in which this reason is set by the caller is outside the scope of this specification.
+This new parameter of the Call-Info header field is called 'call-reason'. The 'call-reason' parameter is intended to convey a short textual message suitable for display to an end user during call alerting. As a general guideline, this message SHOULD be no longer than 64 characters; displays that support this specification may be forced to truncate messages that cannot fit onto a screen. This message conveys the caller's intention in contacting the callee. It is an optional parameter, and the sender of a SIP request cannot guarantee that its display will be supported by the terminating endpoint. The manner in which this reason is set by the caller is outside the scope of this specification.
 
-One alternative approach would be to use the baseline {{RFC3261}} Subject header field value to convey the reason for the call. Because the Subject header field has seen little historical use in SIP implementations, however, and its specification describes its potential use in filtering, it seems more prudent to define a new means of carrying a call reason indication.
+An alternative approach would have been to use the value of Subject header field {{RFC3261}} to convey the reason for the call. However, because the Subject header field has seen little historical use in SIP implementations and its specification describes its potential use in filtering, it seemed prudent to define a new means of carrying a call reason indication.
 
 An example of a Call-Info header field value with the "call-reason" parameter follows:
 
@@ -218,7 +218,7 @@ Call-Info: <https://example.com/jbond.json>;purpose=rcd-jcard;
   call-reason="For your ears only"
 ~~~~~~~~~~~
 
-In the case that there is only a call-reason parameter or any future parameters that may be defined and no need for a purpose parameter with no associated URI, it is RECOMMENDED to include a null data URI, "data:" as the URI. That purpose parameter MUST be "rcd-jcard" defined in this document to avoid any conflicts with existing implementations and previously defined purpose parameters.  As an example:
+In the case that there is only a 'call-reason' parameter or any future parameters that may be defined and no need for a purpose parameter with no associated URI, it is RECOMMENDED to include a null data URI, "data:" as the URI. That purpose parameter MUST be "rcd-jcard" defined in this document to avoid any conflicts with existing implementations and previously defined purpose parameters.  As an example:
 
 ~~~~~~~~~~~
 Call-Info: <data:>;purpose=rcd-jcard;
