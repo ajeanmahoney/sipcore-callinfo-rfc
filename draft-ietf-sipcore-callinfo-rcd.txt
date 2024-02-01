@@ -5,8 +5,8 @@
 Network Working Group                                           C. Wendt
 Internet-Draft                                                Somos Inc.
 Intended status: Standards Track                             J. Peterson
-Expires: 10 June 2024                                       Neustar Inc.
-                                                         8 December 2023
+Expires: 4 August 2024                                      Neustar Inc.
+                                                         1 February 2024
 
 
               SIP Call-Info Parameters for Rich Call Data
@@ -47,11 +47,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 June 2024.
+   This Internet-Draft will expire on 4 August 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -177,35 +177,36 @@ Table of Contents
 
 3.  Overview
 
-   In this document we provide a framework for the use of Call-Info
+   In this document, we provide a framework for the use of Call-Info
    header field to carry RCD in SIP [RFC3261].  The Call-Info header
-   field (defined in [RFC3261], Section 20.9) defines a purpose
+   field (defined in [RFC3261], Section 20.9) defines a 'purpose'
    parameter.  In addition to providing guidance on calling name
-   practices and the use of existing "icon" purpose, this document
-   expands on other types of RCD by defining a new purpose values and
-   one new generic parameter for Call-Info to align with RCD as defined
-   in the STIR [RFC8224] framework and with "rcd" PASSporTs defined in
+   practices and the use of the existing 'purpose' parameter token,
+   "icon", this document expands on other types of RCD by defining a new
+   'purpose' token, "rcd-jcard", and a new generic parameter, 'call-
+   reason', for the Call-Info header field to align with RCD as defined
+   in the STIR framework [RFC8224] and with "rcd" PASSporTs defined in
    [I-D.ietf-stir-passport-rcd].
 
-   The first purpose value defined is "rcd-jcard" and is used to
-   associate RCD related to the identity of the calling party in the
-   form of a jCard [RFC7095].  While there is a "card" token that is
-   defined in [RFC3261] with what could be considered overlapping
-   purposes, the specific intent of the use of "rcd-jcard" is for the
-   profile of jCard defined in this document for use in Call-Info for
-   RCD.  The choice of jCard in this specification is guided by two
-   things.  First, JSON has become the default and is generally the
-   widely accepted optimally supported format for transmission, parsing,
-   and manipulation of data on IP networks and jCard represents an
+   The 'purpose' parameter token "rcd-jcard" is used to associate RCD
+   related to the identity of the calling party in the form of a jCard
+   [RFC7095].  While there is a "card" token defined in [RFC3261] which
+   could be considered to have an overlapping purpose, the "rcd-jcard"
+   token is intended to denote the jCard profile defined in this
+   document for use in the Call-Info header field for RCD.  The choice
+   of jCard in this specification is guided by two things.  First, JSON
+   has become the default and is generally the widely accepted,
+   optimally supported format for transmission, parsing, and
+   manipulation of data on IP networks, and jCard represents an
    extensible method of providing information about a person or business
-   associated with a call.  Second, jCard has also been defined in
+   associated with a call.  Second, jCard has been defined in
    [I-D.ietf-stir-passport-rcd] and has been adopted by PASSporT
    [RFC8225] because of the usage of JSON Web Tokens (JWT) [RFC7519].
 
-   A parameter for "call-reason" is to be used to provide a string or
-   other object that is used to convey the intent or reason the caller
-   is calling to help the called party understand better the context and
-   intent of the call and why they may want to answer the call.
+   The new Call-Info header field parameter 'call-reason' provides a
+   string or other object that conveys the caller's intent or reason for
+   calling to help the called party understand the context and intent of
+   the call and why they may want to answer the call.
 
 4.  A Call-Info Framework for Carrying Rich Call Data
 
