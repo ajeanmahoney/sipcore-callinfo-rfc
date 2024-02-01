@@ -210,76 +210,75 @@ Table of Contents
 
 4.  A Call-Info Framework for Carrying Rich Call Data
 
-   This specification is intended to extend the Call-Info header field
-   to be compatible and complimentary to the RCD framework defined in
-   [I-D.ietf-stir-passport-rcd].  In general, a SIP based call involves
-   multiple hops that transition between different trusted and untrusted
-   network relationships.  The STIR framework [RFC7340] is intended to
-   address the protection of the carriage of different call information
-   and identities over untrusted network relationships that wasn't
-   addressed when the SIP specifications were originally defined.  Call-
-   Info, as defined in [RFC3261], Section 20.9, is the defined mechanism
-   for carrying call and caller related information and also defines
-   procedures for defining new purpose tokens.  This document will
-   discuss the use of both existing tokens and define new purpose tokens
-   to correspond to the RCD framework.
+   This specification extends the Call-Info header field to be
+   compatible and complimentary to the RCD framework defined in
+   [I-D.ietf-stir-passport-rcd].  Typically, a SIP-based call involves
+   multiple hops through different trusted and untrusted networks.  The
+   STIR framework [RFC7340] addresses the protection of the carriage of
+   call information and identities over untrusted networks, which wasn't
+   addressed in the core SIP specifications.  [RFC3261], Section 20.9
+   defines the Call-Info header field as the mechanism for carrying
+   call- and caller-related information and also provides procedures for
+   defining new 'purpose' parameter tokens.  This document discusses the
+   use of existing tokens and defines a new 'purpose' token to
+   correspond to the RCD framework.
 
-   There are a number of RCD information that can use the Call-Info
-   header field to transmit the information in a SIP request.  The
-   current STIR RCD specification [I-D.ietf-stir-passport-rcd] defines
-   calling name and a logo or icon associated with the caller and a call
-   reason string.  It also discusses a more extensible way of carrying
-   caller information using jCard [RFC7095].  It may be that future
-   specifications may extend more information types and similar to how
-   this document discusses extending Call-Info to provide corresponding
-   functionality to STIR RCD it is RECOMMENDED that future
-   specifications also provide corresponding Call-Info extensions.
+   There are a number of RCD information types that can be transmitted
+   in the Call-Info header field of a SIP request.  The STIR RCD
+   specification [I-D.ietf-stir-passport-rcd] defines calling name, a
+   logo or icon associated with the caller, and a call reason string.
+   It also discusses an extensible way of carrying caller information
+   using jCard [RFC7095].  It may be that future specifications extend
+   information types and, similar to how this document extends the Call-
+   Info header field to provide corresponding functionality to STIR RCD,
+   it is RECOMMENDED that future specifications also provide
+   corresponding Call-Info extensions.
 
-   The RCD framework both defined in this document as well as in
-   [I-D.ietf-stir-passport-rcd] are call specific information.  The
+   The RCD framework defined both in this document as well as in
+   [I-D.ietf-stir-passport-rcd] carries call-specific information.  The
    insertion of RCD is intended to be singular in that the receiving
-   party should not be required to make any call specific decisions on
-   redundant, duplicate, or conflicting RCD it would not be in the
-   position to make.  With the use of Call-Info for the transmission of
-   RCD, any RCD-related information defined in this specification or
-   future specifications that extend this mechanism MUST be contained in
-   a single Call-Info header field containing all URI and purpose tokens
-   and parameters related to RCD.  The RCD information is intended to be
-   added by a party that is authoritative over that information or it
-   has been translated from a verified STIR RCD PASSporT unmodified once
-   in a trusted domain.  Any additional parties involved in the call
-   path SHOULD NOT generally modify the Call-Info or add additional
-   Call-Info header fields related to RCD.  The insertion of the RCD
-   Call-Info header field should be considered a trusted action based on
-   trusted information and the information SHOULD NOT be considered
-   modifiable as a best practice.
+   party should not be required to make any call-specific decisions
+   based on redundant, duplicate, or conflicting RCD.  With the use of
+   the Call-Info header field for the transmission of RCD, any RCD-
+   related information defined in this specification or future
+   specifications that extend this mechanism MUST be contained in a
+   single Call-Info header field containing all URI and 'purpose' tokens
+   and parameters related to RCD.  The RCD information is either
+   intended to be added by a party that is authoritative over that
+   information or to have been translated from a verified STIR RCD
+   PASSporT and unmodified once in a trusted domain.  Any additional
+   parties involved in the call path SHOULD NOT modify the Call-Info
+   header field or add additional Call-Info header fields related to
+   RCD.  The insertion of the RCD Call-Info header field should be
+   considered a trusted action based on trusted information, and the
+   information SHOULD NOT be considered modifiable as a best practice.
 
-   As discussed in [I-D.ietf-stir-passport-rcd], calling name is already
-   covered in [RFC3261] using the display-name component of the From
-   header field value of the request, alternatively for some calls this
-   may come from the P-Asserted-ID header field [RFC3325].  This is out
-   of scope for Call-Info header field so will not be covered in this
-   document further.
+   As discussed in [I-D.ietf-stir-passport-rcd], the calling name uses
+   the display-name value of the From header field [RFC3261] of the
+   request.  Alternatively, for some calls, the calling name may come
+   from the P-Asserted-ID header field [RFC3325].  This is out of scope
+   for Call-Info header field, so will not be covered in this document
+   further.
 
-   For logos or icons that can represent the calling party the "icon"
-   purpose token is defined in [RFC3261] and is intended to be used for
-   defining a URI to reference an image resource that can be displayed
-   to the user that receives the SIP request.  For the purpose of this
-   document and the transmission of RCD, this purpose token should be
-   used as defined.  There is some high level guidance provided later in
-   the document around some of the image formatting and related
-   information.
+   For logos or icons that can represent the calling party, the
+   'purpose' token "icon" [RFC3261] is used to indicate a URI for an
+   image resource that can be displayed to the user receiving the SIP
+   request.  For the purpose of this document and the transmission of
+   RCD, the "icon" 'purpose' token should be used as defined.
+   Section 8.2 provides high-level guidance on image formatting and
+   related information.
 
-   Call reason is a new parameter that this document defines as a string
-   with a new Call-Info header field parameter.  jCard is another more
-   comprehensive and extensible mechanism defined in the STIR RCD
-   framework.  While [RFC3261] does have a "card" purpose token, the
-   intent of defining a new "rcd-jcard" purpose token is to specifically
-   use the JSON jCard [RFC7095] and provide specific guidance in this
-   document for the use and non-use of the attributes of the jCard
-   specification specific to describing the calling party in a
-   communications session as well as some of the security considerations
-   around that information.  Both of these are specifically defined in
+   This document defines 'call-reason' as a new parameter for the Call-
+   Info header field.  This parameter carries a string indicating the
+   reason for the call.
+
+   jCard is a comprehensive and extensible mechanism defined in the STIR
+   RCD framework.  While [RFC3261] specifies a "card" 'purpose' token,
+   the intent of defining a new "rcd-jcard" 'purpose' token is to use
+   the JSON jCard format [RFC7095] and to provide guidance for the use
+   and non-use of jCard attributes to describe the calling party in a
+   communications session as well to provide some security
+   considerations around that information.  These topics are covered in
    the next sections.
 
 5.  "rcd-jcard" Call-Info Token
