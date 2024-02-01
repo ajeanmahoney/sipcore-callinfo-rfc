@@ -225,9 +225,9 @@ Call-Info: <data:>;purpose=rcd-jcard;
   call-reason="For your ears only"
 ~~~~~~~~~~~
 
-# Examples and Usage of Call-Info for Rich Call Data
+# Usage and an Example of Call-Info for RCD
 
-The procedures for the usage of the purpose tokens and URIs should generally follow the procedures defined in {{RFC3261}}. So, as an example, if there is a jCard and icon with a call reason, the following example shows the use of multiple purpose and parameters in the the Call-Info header field.
+The procedures for the usage of URIs and 'purpose' parameter tokens should generally follow the procedures defined in {{RFC3261}}. The following example of a Call-Info header field shows the use of multiple 'purpose' parameters to indicate a jCard and an icon and also a 'call-reason' parameter:
 
 ~~~~~~~~~~~
 Call-Info: <https://example.com/jbond.json>;purpose=rcd-jcard,
