@@ -71,7 +71,7 @@ Table of Contents
    4.  A Call-Info Framework for Carrying Rich Call Data
    5.  "rcd-jcard" Call-Info 'purpose' Token
    6.  'call-reason' Call-Info Parameter
-   7.  Examples and Usage of Call-Info for Rich Call Data
+   7.  Usage and an Example of Call-Info for RCD
    8.  Usage of jCard and Property-Specific Usage
      8.1.  Usage of URIs in jCard
      8.2.  Usage of Multimedia Data in jCard or with Icon
@@ -441,13 +441,13 @@ Table of Contents
    Call-Info: <data:>;purpose=rcd-jcard;
      call-reason="For your ears only"
 
-7.  Examples and Usage of Call-Info for Rich Call Data
+7.  Usage and an Example of Call-Info for RCD
 
-   The procedures for the usage of the purpose tokens and URIs should
-   generally follow the procedures defined in [RFC3261].  So, as an
-   example, if there is a jCard and icon with a call reason, the
-   following example shows the use of multiple purpose and parameters in
-   the the Call-Info header field.
+   The procedures for the usage of URIs and 'purpose' parameter tokens
+   should generally follow the procedures defined in [RFC3261].  The
+   following example of a Call-Info header field shows the use of
+   multiple 'purpose' parameters to indicate a jCard and an icon and
+   also a 'call-reason' parameter:
 
    Call-Info: <https://example.com/jbond.json>;purpose=rcd-jcard,
      <https://example.com/jbond.png>;purpose=icon;
