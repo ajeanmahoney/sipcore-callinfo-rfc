@@ -276,45 +276,45 @@ Property cardinalities are indicated, for convenience, using the following notat
 ~~~~~~~~~~~
 
 ## Identification Properties
-These types are used to capture information associated with the identification and naming of the entity associated with the jCard. They are initially defined in {{RFC6350}}, but the following list of properties included and repeated in this Section is a subset of the properties defined for jCard with properties selected for this document that have relevance to telephone and messaging applications. jCard is an extensible object and therefore, there may also be future specifications that extend the set of properties that may be relevant to the set of communications applications that utilize this specification.
+The following properties, initially defined in {{RFC6350}}, hold the identity information of the entity associated with the jCard. This subset of properties selected for this document are relevant to telephone and messaging applications. jCard is an extensible object; therefore, there may be future specifications that extend the set of properties relevant to the applications that implement this specification.
 
 ### "fn" Property
 
-The "fn" property has the intent of providing a formatted text corresponding to the name of the object the jCard represents.  Reference {{RFC6350, Section 6.2.1}}.
+The "fn" property provides a formatted text corresponding to the name of the object the jCard represents.  Reference: {{RFC6350, Section 6.2.1}}.
 
 Value type:  A single text value.
 
 Cardinality:  1*
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["fn", {}, "text", "Mr. John Q. Public\, Esq."]
 ~~~~~~~~~~~~
 
 ### "n" Property
 
-The "n" property has the intent of providing the components of the name of the object the jCard represents. Reference {{RFC6350, Section 6.2.2}}.
+The "n" property provides the components of the name of the object the jCard represents. Reference: {{RFC6350, Section 6.2.2}}.
 
 Value type:  A single structured text value. Each component can have multiple values.
 
 Cardinality:  *1
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["n", {}, "text", "Public;John;Quinlan;Mr.;Esq."]
 ["n", {}, "text", "Stevenson;John;Philip,Paul;Dr.;Jr.,M.D.,A.C.P."]
 ~~~~~~~~~~~~
 
 ### "nickname" Property
 
-The "nickname" property has the intent of providing the text corresponding to the nickname of the object the jCard represents. Reference {{RFC6350, Section 6.2.3}}.
+The "nickname" property provides the text corresponding to the nickname of the object the jCard represents. Reference: {{RFC6350, Section 6.2.3}}.
 
 Value type:  One or more text values separated by a COMMA character (U+002C).
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["nickname", {}, "text", "Robbie"]
 ["nickname", {}, "text", "Jim,Jimmie"]
 ["nickname", {}, "text", "TYPE=work:Boss"]
@@ -322,16 +322,16 @@ Example:
 
 ### "photo" Property
 
-The "photo" property has the intent of supplying an image or photograph information that annotates some aspect of the object the jCard represents. Reference {{RFC6350, Section 6.2.4}}.
+The "photo" property provides image or photograph information that annotates some aspect of the object the jCard represents. Reference: {{RFC6350, Section 6.2.4}}.
 
-In addition to the definition of jCard, and to promote interoperability and proper formatting and rendering of images, the photo SHOULD correspond to a square image size of the sizes 128x128, 256x256, 512x512, or 1024x1024 pixels.
+In addition to the definition of jCard, and to promote interoperability and proper formatting and rendering of images, the photo SHOULD correspond to a square image with the size of 128x128, 256x256, 512x512, or 1024x1024 pixels.
 
 Value type:  A single URI.
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["photo", {}, "uri", "http://www.example.com/jqpublic-256x256.png"]
 ~~~~~~~~~~~~
 
