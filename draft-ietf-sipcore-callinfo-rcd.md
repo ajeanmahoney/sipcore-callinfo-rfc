@@ -617,13 +617,13 @@ Part of the intent of the usage of jCard is that it has its own extensibility pr
 
 # Security Considerations {#Security}
 
-Revealing information such as the name, location, and affiliation of a person necessarily entails certain privacy risks. SIP and Call-Info has no particular confidentiality requirement, as the information sent in SIP is in the clear anyway. Transport-level security can be used to hide information from eavesdroppers, and the same confidentiality mechanisms would protect any Call-Info or jCard information carried or referred to in SIP.
+Revealing information such as the name, location, and affiliation of a person necessarily entails certain privacy risks. The SIP Call-Info header field has no particular confidentiality requirement, as the information sent in SIP is in the clear anyway. Transport-level security can be used to hide information from eavesdroppers, and the same confidentiality mechanisms would protect any Call-Info or jCard information carried or referred to in SIP.
 
-The security framework of signing and providing integrity to this data should be followed {{I-D.ietf-stir-passport-rcd}}, with the idea that the use of constraints and other certificate based associations should be considered. This includes considerations around information about the calling party being generally constant vs per call data being more temporal. This also includes the relationship that certificates with constraints presents to how they relate to each other and how that information is managed, protected, and associated with the correct call corresponding to a calling party.
+The security framework of signing and providing integrity to this data {{I-D.ietf-stir-passport-rcd}} should be followed, and the use of constraints and other certificate-based associations should be considered. This includes considerations for information about the calling party, which is generally constant, versus per-call data, which is more transient. This also includes the relationship that certificates with constraints presents to how they relate to each other and how that information is managed, protected, and associated with the correct call corresponding to a calling party.
 
 --- back
 
 # Acknowledgements {#Acknowledgements}
 {: numbered="false"}
 
-We would like to thank David Hancock, Alec Fenichel and other members of the SIPCORE and STIR working group for helpful suggestions and comments for the creation of this draft.
+We would like to thank David Hancock, Alec Fenichel, and other members of the SIPCORE and STIR working groups for their helpful suggestions and comments during the creation of this document.
