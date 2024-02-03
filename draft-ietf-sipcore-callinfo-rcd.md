@@ -337,18 +337,18 @@ Example:
 
 ## Delivery Addressing Properties
 
-These properties are concerned with information related to the delivery addressing or label for the jCard object.
+This property is concerned with information related to the delivery address of the jCard object.
 
 ### "adr" Property
 
-The "adr" property has the intent of providing the delivery address of the object the jCard represents. Reference {{RFC6350, Section 6.3.1}}.
+The "adr" property provides the delivery address of the object the jCard represents. Reference: {{RFC6350, Section 6.3.1}}.
 
-Value type:  A single structured text value, separated by the SEMICOLON character (U+003B).
+Value type:  A single structured text value separated by the SEMICOLON character (U+003B).
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["adr", {"type":"work"}, "text",
   ["", "", "3100 Massachusetts Avenue NW", "Washington", "DC",
   "20008", "USA"]
