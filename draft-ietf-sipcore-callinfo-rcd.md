@@ -408,34 +408,34 @@ Example:
 
 ## Geographical Properties
 
-These properties are concerned with information associated with geographical positions or regions associated with the object the jCard represents.
+These properties provide geographical information associated with the object the jCard represents.
 
 ### "tz" Property
 
-The "tz" property has the intent of providing the time zone of the object the jCard represents. Reference {{RFC6350, Section 6.5.1}}.
+The "tz" property provides the time zone of the object the jCard represents. Reference: {{RFC6350, Section 6.5.1}}.
 
-Note: the up-to-date reference for where time-zone names are maintained is, at the authoring of this document, at this web address, https://www.iana.org/time-zones.
+Note: the reference for time-zone names is https://www.iana.org/time-zones.
 
 Value type:  The default is a single text value.  It can also be
-   reset to a single URI or utc-offset value.
+   reset to a single URI or a UTC-offset value.
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["tz", {}, "text", "Raleigh/North America"]
 ~~~~~~~~~~~~
 
 ### "geo" Property
 
-The "geo" property has the intent of providing the global positioning of the object the jCard represents. Reference {{RFC6350, Section 6.5.2}}.
+The "geo" property provides the global positioning of the object the jCard represents. Reference: {{RFC6350, Section 6.5.2}}.
 
 Value type:  A single URI.
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["geo", {}, "uri", "geo:37.386013,-122.082932"]
 ~~~~~~~~~~~~
 
