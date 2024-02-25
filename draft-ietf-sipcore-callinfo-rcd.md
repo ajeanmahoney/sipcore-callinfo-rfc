@@ -502,19 +502,19 @@ Example:
 
 ## Explanatory Properties
 
-These properties are concerned with additional explanations, such as that related to informational notes or revisions specific to the jCard.
+These properties provide additional information such as notes or revisions specific to the jCard.
 
 ### "categories" Property
 
-The "categories" property has the intent of specifying application category information about the object the jCard represents. Reference {{RFC6350, Section 6.7.1}}.
+The "categories" property specifies application category information about the object the jCard represents. Reference: {{RFC6350, Section 6.7.1}}.
 
 Value type:  One or more text values separated by a COMMA character
    (U+002C).
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["categories", {}, "text", "TRAVEL AGENT"]
 
 ["categories", {}, "text", "INTERNET,IETF,INDUSTRY"]
@@ -522,29 +522,29 @@ Example:
 
 ### "note" Property
 
-The "note" property has the intent of specifying supplemental information or a comment about the object the jCard represents. Reference {{RFC6350, Section 6.7.2}}.
+The "note" property specifies supplemental information or a comment about the object the jCard represents. Reference: {{RFC6350, Section 6.7.2}}.
 
 Value type:  A single text value.
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["note", {}, "text", "This fax number is operational 0800 to 1715
              EST\, Mon-Fri."]
 ~~~~~~~~~~~~
 
 ### "sound" Property
 
-The "sound" property has the intent of specifying a digital sound content information that annotates some aspect of the object the jCard represents. This property is often used to specify the proper pronunciation of the name property value of the jCard. Reference {{RFC6350, Section 6.7.5}}.
+The "sound" property specifies digital sound content information that annotates some aspect of the object the jCard represents. This property is often used to specify the proper pronunciation of the name property value of the jCard. Reference: {{RFC6350, Section 6.7.5}}.
 
 Value type:  A single URI.
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
-["sound", {}, "uri", "http://www.example.com/pub/logos/abccorp.mp3"]
+~~~~~~~~~~~~
+["sound", {}, "uri", "https://www.example.com/pub/logos/abccorp.mp3"]
 
 ["sound", {}, "uri", "data:audio/basic;base64,MIICajCCAdOgAwIBAgICBE
       AQEEBQAwdzELMAkGA1UEBhMCVVMxLDAqBgNVBAoTI05ldHNjYXBlIENvbW11bm
@@ -554,42 +554,42 @@ Example:
 
 ### "uid" Property
 
-The "uid" property has the intent of specifying a globally unique identifier corresponding to the object the jCard represents. Reference {{RFC6350, Section 6.7.6}}.
+The "uid" property specifies a globally unique identifier corresponding to the object the jCard represents. Reference: {{RFC6350, Section 6.7.6}}.
 
 Value type:  A single URI value.  It MAY also be reset to free-form text.
 
 Cardinality: *1
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["uid", {}, "uri", "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6"]
 ~~~~~~~~~~~~
 
 ### "url" Property
 
-The "url" property has the intent of specifying a uniform resource locator associated with the object the jCard represents. Reference {{RFC6350, Section 6.7.8}}.
+The "url" property specifies a uniform resource locator associated with the object the jCard represents. Reference: {{RFC6350, Section 6.7.8}}.
 
-There is potential security and privacy implications of providing URLs with telephone calls. The end client receiving a jCard with a URL property MUST only display the URL and not automatically follow the URL or provide automatic preview of the URL, and generally provide good practices in making it clear to the user it is their choice to follow the URL in a browser context consistent with all of the common browser security and privacy practices available on most consumer OS environments.
+There are potential security and privacy implications of providing URLs with telephone calls. The end client receiving a jCard with a "url" property MUST only display the URL and not automatically follow the URL or provide automatic preview of the URL, and generally provide good practices in making it clear to the user it is their choice to follow the URL in a browser context consistent with all of the common browser security and privacy practices available on most consumer OS environments.
 
 Value type:  A single uri value.
 
 Cardinality:  *
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["url", {}, "uri", "https://example.org/french-rest/chezchic.html"]
 ~~~~~~~~~~~~
 
 ### "version" Property
 
-The "version" property MUST be included and is intended to specify the version of the vCard specification used to format this vCard. Reference {{RFC6350, Section 6.7.9}}.
+The "version" property MUST be included and is intended to specify the version of the vCard specification used to format this vCard. Reference: {{RFC6350, Section 6.7.9}}.
 
 Value type:  A single text value.
 
 Cardinality:  1
 
-~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~
 ["version", {}, "text", "4.0"]
 ~~~~~~~~~~~~
 
