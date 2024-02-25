@@ -1660,23 +1660,21 @@ Call-Info: &lt;https://example.com/jbond.json&gt;;purpose=rcd-jcard,
         <h3 id="name-geographical-properties">
 <a href="#section-8.7" class="section-number selfRef">8.7. </a><a href="#name-geographical-properties" class="section-name selfRef">Geographical Properties</a>
         </h3>
-<p id="section-8.7-1">These properties are concerned with information associated with geographical positions or regions associated with the object the jCard represents.<a href="#section-8.7-1" class="pilcrow">¶</a></p>
+<p id="section-8.7-1">These properties provide geographical information associated with the object the jCard represents.<a href="#section-8.7-1" class="pilcrow">¶</a></p>
 <div id="tz-property">
 <section id="section-8.7.1">
           <h4 id="name-tz-property">
 <a href="#section-8.7.1" class="section-number selfRef">8.7.1. </a><a href="#name-tz-property" class="section-name selfRef">"tz" Property</a>
           </h4>
-<p id="section-8.7.1-1">The "tz" property has the intent of providing the time zone of the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.5.1" class="relref">Section 6.5.1</a></span>.<a href="#section-8.7.1-1" class="pilcrow">¶</a></p>
-<p id="section-8.7.1-2">Note: the up-to-date reference for where time-zone names are maintained is, at the authoring of this document, at this web address, https://www.iana.org/time-zones.<a href="#section-8.7.1-2" class="pilcrow">¶</a></p>
+<p id="section-8.7.1-1">The "tz" property provides the time zone of the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.5.1" class="relref">Section 6.5.1</a></span>.<a href="#section-8.7.1-1" class="pilcrow">¶</a></p>
+<p id="section-8.7.1-2">Note: the reference for time-zone names is https://www.iana.org/time-zones.<a href="#section-8.7.1-2" class="pilcrow">¶</a></p>
 <p id="section-8.7.1-3">Value type:  The default is a single text value.  It can also be
-   reset to a single URI or utc-offset value.<a href="#section-8.7.1-3" class="pilcrow">¶</a></p>
+   reset to a single URI or a UTC-offset value.<a href="#section-8.7.1-3" class="pilcrow">¶</a></p>
 <p id="section-8.7.1-4">Cardinality:  *<a href="#section-8.7.1-4" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.7.1-5">
-<pre>
-Example:
+<p id="section-8.7.1-5">Example:
+~~~~~~~~~~~~
 ["tz", {}, "text", "Raleigh/North America"]
-</pre><a href="#section-8.7.1-5" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.7.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="geo-property">
@@ -1684,15 +1682,13 @@ Example:
           <h4 id="name-geo-property">
 <a href="#section-8.7.2" class="section-number selfRef">8.7.2. </a><a href="#name-geo-property" class="section-name selfRef">"geo" Property</a>
           </h4>
-<p id="section-8.7.2-1">The "geo" property has the intent of providing the global positioning of the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.5.2" class="relref">Section 6.5.2</a></span>.<a href="#section-8.7.2-1" class="pilcrow">¶</a></p>
+<p id="section-8.7.2-1">The "geo" property provides the global positioning of the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.5.2" class="relref">Section 6.5.2</a></span>.<a href="#section-8.7.2-1" class="pilcrow">¶</a></p>
 <p id="section-8.7.2-2">Value type:  A single URI.<a href="#section-8.7.2-2" class="pilcrow">¶</a></p>
 <p id="section-8.7.2-3">Cardinality:  *<a href="#section-8.7.2-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.7.2-4">
-<pre>
-Example:
+<p id="section-8.7.2-4">Example:
+~~~~~~~~~~~~
 ["geo", {}, "uri", "geo:37.386013,-122.082932"]
-</pre><a href="#section-8.7.2-4" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.7.2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
