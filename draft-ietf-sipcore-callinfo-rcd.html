@@ -1511,21 +1511,19 @@ Call-Info: &lt;https://example.com/jbond.json&gt;;purpose=rcd-jcard,
         <h3 id="name-identification-properties">
 <a href="#section-8.4" class="section-number selfRef">8.4. </a><a href="#name-identification-properties" class="section-name selfRef">Identification Properties</a>
         </h3>
-<p id="section-8.4-1">These types are used to capture information associated with the identification and naming of the entity associated with the jCard. They are initially defined in <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>]</span>, but the following list of properties included and repeated in this Section is a subset of the properties defined for jCard with properties selected for this document that have relevance to telephone and messaging applications. jCard is an extensible object and therefore, there may also be future specifications that extend the set of properties that may be relevant to the set of communications applications that utilize this specification.<a href="#section-8.4-1" class="pilcrow">¶</a></p>
+<p id="section-8.4-1">The following properties, initially defined in <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>]</span>, hold the identity information of the entity associated with the jCard. This subset of properties selected for this document are relevant to telephone and messaging applications. jCard is an extensible object; therefore, there may be future specifications that extend the set of properties relevant to the applications that implement this specification.<a href="#section-8.4-1" class="pilcrow">¶</a></p>
 <div id="fn-property">
 <section id="section-8.4.1">
           <h4 id="name-fn-property">
 <a href="#section-8.4.1" class="section-number selfRef">8.4.1. </a><a href="#name-fn-property" class="section-name selfRef">"fn" Property</a>
           </h4>
-<p id="section-8.4.1-1">The "fn" property has the intent of providing a formatted text corresponding to the name of the object the jCard represents.  Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.2.1" class="relref">Section 6.2.1</a></span>.<a href="#section-8.4.1-1" class="pilcrow">¶</a></p>
+<p id="section-8.4.1-1">The "fn" property provides a formatted text corresponding to the name of the object the jCard represents.  Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.2.1" class="relref">Section 6.2.1</a></span>.<a href="#section-8.4.1-1" class="pilcrow">¶</a></p>
 <p id="section-8.4.1-2">Value type:  A single text value.<a href="#section-8.4.1-2" class="pilcrow">¶</a></p>
 <p id="section-8.4.1-3">Cardinality:  1*<a href="#section-8.4.1-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.4.1-4">
-<pre>
-Example:
+<p id="section-8.4.1-4">Example:
+~~~~~~~~~~~~
 ["fn", {}, "text", "Mr. John Q. Public\, Esq."]
-</pre><a href="#section-8.4.1-4" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.4.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="n-property">
@@ -1533,16 +1531,14 @@ Example:
           <h4 id="name-n-property">
 <a href="#section-8.4.2" class="section-number selfRef">8.4.2. </a><a href="#name-n-property" class="section-name selfRef">"n" Property</a>
           </h4>
-<p id="section-8.4.2-1">The "n" property has the intent of providing the components of the name of the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.2.2" class="relref">Section 6.2.2</a></span>.<a href="#section-8.4.2-1" class="pilcrow">¶</a></p>
+<p id="section-8.4.2-1">The "n" property provides the components of the name of the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.2.2" class="relref">Section 6.2.2</a></span>.<a href="#section-8.4.2-1" class="pilcrow">¶</a></p>
 <p id="section-8.4.2-2">Value type:  A single structured text value. Each component can have multiple values.<a href="#section-8.4.2-2" class="pilcrow">¶</a></p>
 <p id="section-8.4.2-3">Cardinality:  *1<a href="#section-8.4.2-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.4.2-4">
-<pre>
-Example:
+<p id="section-8.4.2-4">Example:
+~~~~~~~~~~~~
 ["n", {}, "text", "Public;John;Quinlan;Mr.;Esq."]
 ["n", {}, "text", "Stevenson;John;Philip,Paul;Dr.;Jr.,M.D.,A.C.P."]
-</pre><a href="#section-8.4.2-4" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.4.2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="nickname-property">
@@ -1550,17 +1546,15 @@ Example:
           <h4 id="name-nickname-property">
 <a href="#section-8.4.3" class="section-number selfRef">8.4.3. </a><a href="#name-nickname-property" class="section-name selfRef">"nickname" Property</a>
           </h4>
-<p id="section-8.4.3-1">The "nickname" property has the intent of providing the text corresponding to the nickname of the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.2.3" class="relref">Section 6.2.3</a></span>.<a href="#section-8.4.3-1" class="pilcrow">¶</a></p>
+<p id="section-8.4.3-1">The "nickname" property provides the text corresponding to the nickname of the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.2.3" class="relref">Section 6.2.3</a></span>.<a href="#section-8.4.3-1" class="pilcrow">¶</a></p>
 <p id="section-8.4.3-2">Value type:  One or more text values separated by a COMMA character (U+002C).<a href="#section-8.4.3-2" class="pilcrow">¶</a></p>
 <p id="section-8.4.3-3">Cardinality:  *<a href="#section-8.4.3-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.4.3-4">
-<pre>
-Example:
+<p id="section-8.4.3-4">Example:
+~~~~~~~~~~~~
 ["nickname", {}, "text", "Robbie"]
 ["nickname", {}, "text", "Jim,Jimmie"]
 ["nickname", {}, "text", "TYPE=work:Boss"]
-</pre><a href="#section-8.4.3-4" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.4.3-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="photo-property">
@@ -1568,16 +1562,14 @@ Example:
           <h4 id="name-photo-property">
 <a href="#section-8.4.4" class="section-number selfRef">8.4.4. </a><a href="#name-photo-property" class="section-name selfRef">"photo" Property</a>
           </h4>
-<p id="section-8.4.4-1">The "photo" property has the intent of supplying an image or photograph information that annotates some aspect of the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.2.4" class="relref">Section 6.2.4</a></span>.<a href="#section-8.4.4-1" class="pilcrow">¶</a></p>
-<p id="section-8.4.4-2">In addition to the definition of jCard, and to promote interoperability and proper formatting and rendering of images, the photo SHOULD correspond to a square image size of the sizes 128x128, 256x256, 512x512, or 1024x1024 pixels.<a href="#section-8.4.4-2" class="pilcrow">¶</a></p>
+<p id="section-8.4.4-1">The "photo" property provides image or photograph information that annotates some aspect of the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.2.4" class="relref">Section 6.2.4</a></span>.<a href="#section-8.4.4-1" class="pilcrow">¶</a></p>
+<p id="section-8.4.4-2">In addition to the definition of jCard, and to promote interoperability and proper formatting and rendering of images, the photo SHOULD correspond to a square image with the size of 128x128, 256x256, 512x512, or 1024x1024 pixels.<a href="#section-8.4.4-2" class="pilcrow">¶</a></p>
 <p id="section-8.4.4-3">Value type:  A single URI.<a href="#section-8.4.4-3" class="pilcrow">¶</a></p>
 <p id="section-8.4.4-4">Cardinality:  *<a href="#section-8.4.4-4" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.4.4-5">
-<pre>
-Example:
+<p id="section-8.4.4-5">Example:
+~~~~~~~~~~~~
 ["photo", {}, "uri", "http://www.example.com/jqpublic-256x256.png"]
-</pre><a href="#section-8.4.4-5" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.4.4-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
