@@ -599,21 +599,29 @@ Part of the intent of using jCard is to leverage its extensibility to define new
 
 # IANA Considerations {#IANA}
 
-## SIP Call-Info Header Field Purpose Token Request
+## SIP Call-Info Header Field 'purpose' Parameter Token
 
-[this RFC] defines the "rcd-jcard" as a new value for the "purpose" parameter in the Call-Info header field in the "Header Field Parameters and Parameter Values" registry defined by {{RFC3968}}.
+This document defines the token "rcd-jcard" as a new value for the 'purpose' parameter of the Call-Info header field in the "Header Field Parameters and Parameter Values" registry defined by {{RFC3968}}.
 
 ~~~~~~~
   +--------------+----------------+-------------------+----------------+
   | Header Field | Parameter Name | Predefined Values | Reference      |
   +--------------+----------------+-------------------+----------------+
-  | Call-Info    | purpose        | Yes               | add:[this RFC] |
+  | Call-Info    | purpose        | Yes               | [this RFC]     |
   +--------------+----------------+-------------------+----------------+
 ~~~~~~~
 
-## SIP Call-Info Header Field Purpose Token Request
+## SIP Call-Info Header Field 'call-reason' Parameter
 
-[this RFC] defines the "call-reason" generic parameter for use as a new parameter in the Call-Info header field in the "Header Field Parameters and Parameter Values" registry defined by [RFC3968]. The parameter's token is "call-reason" and it takes the value of a quoted string.
+This document defines the 'call-reason' generic parameter for use as a new parameter in the Call-Info header field in the "Header Field Parameters and Parameter Values" registry defined by {{RFC3968}}. The parameter's token is "call-reason", and it takes the value of a quoted string.
+
+~~~~~~~
+  +--------------+----------------+-------------------+----------------+
+  | Header Field | Parameter Name | Predefined Values | Reference      |
+  +--------------+----------------+-------------------+----------------+
+  | Call-Info    | call-reason    | No                | [this RFC]     |
+  +--------------+----------------+-------------------+----------------+
+~~~~~~~
 
 # Security Considerations {#Security}
 
