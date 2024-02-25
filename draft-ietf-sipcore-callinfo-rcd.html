@@ -11,18 +11,18 @@
        This document describes a usage of the SIP Call-Info header field that incorporates Rich Call Data (RCD) associated with the identity of the calling party in order to provide to the called party a description of the caller or details about the reason for the call. RCD includes information about the caller beyond the telephone number such as a calling name, or a logo, photo, or jCard object representing the caller, which can help the called party decide whether to answer the phone. The elements defined for this purpose are intended to be extensible in order to accommodate related information about calls and to be compatible and complimentary with the STIR/PASSporT RCD framework. 
        This document defines a new parameter ('call-reason') for the SIP Call-Info header field and also a new token (&quot;rcd-jcard&quot;) for the 'purpose' parameter of the Call-Info header field. It also provides guidance on the use of the Call-Info 'purpose' parameter token, &quot;icon&quot;. 
     " name="description">
-<meta content="xml2rfc 3.19.1" name="generator">
+<meta content="xml2rfc 3.19.4" name="generator">
 <meta content="Identity" name="keyword">
 <meta content="draft-ietf-sipcore-callinfo-rcd-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.19.1
+  xml2rfc 3.19.4
     Python 3.11.6
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
     intervaltree 3.1.0
     Jinja2 3.1.2
     lxml 4.9.3
-    platformdirs 4.1.0
+    platformdirs 4.2.0
     pycountry 22.3.5
     PyYAML 6.0.1
     requests 2.31.0
@@ -1031,7 +1031,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Wendt &amp; Peterson</td>
-<td class="center">Expires 5 August 2024</td>
+<td class="center">Expires 28 August 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1044,12 +1044,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-sipcore-callinfo-rcd-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-02-02" class="published">2 February 2024</time>
+<time datetime="2024-02-25" class="published">25 February 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-08-05">5 August 2024</time></dd>
+<dd class="expires"><time datetime="2024-08-28">28 August 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1088,7 +1088,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 5 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 28 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1477,13 +1477,13 @@ Call-Info: &lt;https://example.com/jbond.json&gt;;purpose=rcd-jcard,
         <h3 id="name-usage-of-multimedia-data-in">
 <a href="#section-8.2" class="section-number selfRef">8.2. </a><a href="#name-usage-of-multimedia-data-in" class="section-name selfRef">Usage of Multimedia Data in jCard or with Icon</a>
         </h3>
-<p id="section-8.2-1">With the use of the purpose token "icon" or for the cases where jCards incorporate URIs or directly include via Base64 encoding of digital images and sounds. We specify a few recommended conventions to facilitate more consistent support of the successful decoding and rendering of these images or media formats.<a href="#section-8.2-1" class="pilcrow">¶</a></p>
-<p id="section-8.2-2">For images, such as for the photo and logo properties, the default image formats SHOULD be png or jpg. These files are mostly commonly used to support 24-bit RGB images which should consequently be the default.  There are some older telephone devices that may only support bmp type of images with lower bit-range (e.g., 16-bit or 8-bit or 1-bit), also with potentially only grayscale or 1-bit black and white color displays.  These exceptions are should considered optional to support or even recommended not to support and at least at the time of writing this document are becoming increasingly rare (i.e., typically displays on devices are either color or color-aware graphical displays that support png or jpg formats or exclusively textual displays).<a href="#section-8.2-2" class="pilcrow">¶</a></p>
-<p id="section-8.2-3">In addition, vector images are increasingly popular in their use for icons and the need for scalable images without having to send multiple resolutions. SVG format and a minimum of support for <span>[<a href="#W3C-SVGTiny1.2" class="cite xref">W3C-SVGTiny1.2</a>]</span> specifically appropriate for this specification has gained wide support as of the writing of this document, as a common format for vector images and should be supported as an additional default format for devices that support this specification.<a href="#section-8.2-3" class="pilcrow">¶</a></p>
-<p id="section-8.2-4">For the cases where image files are referenced by URIs as file resources, this document defines a character string that SHOULD be concatenated on to the end of a file name, before the file extension that signals the height and width of the image to the end device for the convenience of determining the appropriate resolution to retrieve without the need to retrieve all the image files. It is also recommended that images are square ratio formatted with equal height and width and with a power of two value for the number of pixels (e.g., 32x32, 128x128, 512x512). The format of the string should be "filename-HxW" where filename represents the unique string representing the file and H represents the height in pixels and W represents the width in pixels.<a href="#section-8.2-4" class="pilcrow">¶</a></p>
-<p id="section-8.2-5">It is appropriate and useful to include multiple versions of images or sounds so that endpoints that may not support all formats or resolutions can select the format they support.  The convention that is RECOMMENDED is that files that refer to the same content should use the same filename portion.  If it is an image format that has a specific resolution, the HxW portion of the filename should correspond to the pixel resolution. The file extension should reference the file type (e.g., filename.png, filename.svg, or filename.jpg) or (e.g., filename-32x32.png, filename-64x64.png, filename.svg, filename-32x32.jpg, or filename-64x64.jpg).<a href="#section-8.2-5" class="pilcrow">¶</a></p>
-<p id="section-8.2-6">Because this is a complex and often debated topic that has evolved over the many years of advances in image coding and display technologies, we likely suggest relying on either future specifications or industry forum specifications that might correspond to supporting particular classes of devices to further define how URIs can reference appropriate image formats and files.<a href="#section-8.2-6" class="pilcrow">¶</a></p>
-<p id="section-8.2-7">For audio files, the recommendation is to provide mp3, m4a, or wav files, although the usage of sound is not well defined in this specification as, for example, a special ring tone for a particular caller, and future documents should consider both usage and potential security risks of playing sounds that are not specifically authorized by a device user.<a href="#section-8.2-7" class="pilcrow">¶</a></p>
+<p id="section-8.2-1">For the use of the 'purpose' token "icon" or for the cases where the jCard either incorporates URIs or includes digital images and sounds directly via Base64 encoding, we provide recommendations to facilitate the successful decoding and rendering of these images and media formats.<a href="#section-8.2-1" class="pilcrow">¶</a></p>
+<p id="section-8.2-2">For images, such as for the "photo" and "logo" properties, the default image formats SHOULD be PNG or JPEG, as these files are commonly used to support 24-bit RGB images.  Supporting older telephone devices that only support bitmap (BMP) images with a lower bit range (e.g., 16 bit, 8 bit, or 1 bit), or grayscale, or 1-bit black and white color displays, should be considered optional or even not recommended because, at the time of writing, they are becoming increasingly rare (i.e., typically, devices either have color or color-aware graphical displays that support PNG or JPEG formats or they are exclusively textual displays).<a href="#section-8.2-2" class="pilcrow">¶</a></p>
+<p id="section-8.2-3">In addition, vector images are increasingly popular to use for icons because they support scalable images without having to send multiple resolutions. The SVG format has gained wide support as of this writing as a common format for vector images. At a minimum, the SVG Tiny 1.2 specification <span>[<a href="#W3C-SVGTiny1.2" class="cite xref">W3C-SVGTiny1.2</a>]</span> should be supported as an additional default format for devices.<a href="#section-8.2-3" class="pilcrow">¶</a></p>
+<p id="section-8.2-4">For the cases where image files are referenced by URIs as file resources, this document defines a character string that SHOULD be concatenated onto the end of a file name, but before the file extension, that signals the height and width of the image to the end device for the convenience of determining the appropriate resolution to retrieve without the need to retrieve all the image files. It is also recommended that images have a square aspect ratio with equal height and width and with a power of two value for the number of pixels (e.g., 32x32, 128x128, 512x512). The format of the string should be "filename-HxW", where "filename" is a unique string representing the file, "H" represents the height in pixels, and "W" represents the width in pixels.<a href="#section-8.2-4" class="pilcrow">¶</a></p>
+<p id="section-8.2-5">It is appropriate and useful to include multiple versions of images or sounds so that endpoints that cannot support all formats or resolutions can select the format they do support.  The convention that is RECOMMENDED is that files that refer to the same content should use the same filename portion.  If the image format has a specific resolution, the HxW portion of the filename should correspond to the pixel resolution. The file extension should reference the file type (e.g., filename.png, filename.svg, or filename.jpg) or (e.g., filename-32x32.png, filename-64x64.png, filename.svg, filename-32x32.jpg, or filename-64x64.jpg).<a href="#section-8.2-5" class="pilcrow">¶</a></p>
+<p id="section-8.2-6">Because this is a complex and often debated topic that has evolved over the many years of advances in image coding and display technologies, we suggest relying on either future specifications or industry forum specifications that might correspond to supporting particular classes of devices to further define how URIs can reference appropriate image formats and files.<a href="#section-8.2-6" class="pilcrow">¶</a></p>
+<p id="section-8.2-7">For audio files, the recommendation is to provide mp3, m4a, or wav files, although the usage of sound (for example, a special ring tone for a particular caller) is not well defined in this specification. Future documents should consider both usage and potential security risks of playing sounds that are not specifically authorized by a device user.<a href="#section-8.2-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="cardinality">
