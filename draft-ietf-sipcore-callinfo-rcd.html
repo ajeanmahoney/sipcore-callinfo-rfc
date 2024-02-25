@@ -1775,24 +1775,21 @@ Example:
         <h3 id="name-explanatory-properties">
 <a href="#section-8.9" class="section-number selfRef">8.9. </a><a href="#name-explanatory-properties" class="section-name selfRef">Explanatory Properties</a>
         </h3>
-<p id="section-8.9-1">These properties are concerned with additional explanations, such as that related to informational notes or revisions specific to the jCard.<a href="#section-8.9-1" class="pilcrow">¶</a></p>
+<p id="section-8.9-1">These properties provide additional information such as notes or revisions specific to the jCard.<a href="#section-8.9-1" class="pilcrow">¶</a></p>
 <div id="categories-property">
 <section id="section-8.9.1">
           <h4 id="name-categories-property">
 <a href="#section-8.9.1" class="section-number selfRef">8.9.1. </a><a href="#name-categories-property" class="section-name selfRef">"categories" Property</a>
           </h4>
-<p id="section-8.9.1-1">The "categories" property has the intent of specifying application category information about the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.1" class="relref">Section 6.7.1</a></span>.<a href="#section-8.9.1-1" class="pilcrow">¶</a></p>
+<p id="section-8.9.1-1">The "categories" property specifies application category information about the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.1" class="relref">Section 6.7.1</a></span>.<a href="#section-8.9.1-1" class="pilcrow">¶</a></p>
 <p id="section-8.9.1-2">Value type:  One or more text values separated by a COMMA character
    (U+002C).<a href="#section-8.9.1-2" class="pilcrow">¶</a></p>
 <p id="section-8.9.1-3">Cardinality:  *<a href="#section-8.9.1-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.9.1-4">
-<pre>
-Example:
-["categories", {}, "text", "TRAVEL AGENT"]
-
-["categories", {}, "text", "INTERNET,IETF,INDUSTRY"]
-</pre><a href="#section-8.9.1-4" class="pilcrow">¶</a>
-</div>
+<p id="section-8.9.1-4">Example:
+~~~~~~~~~~~~
+["categories", {}, "text", "TRAVEL AGENT"]<a href="#section-8.9.1-4" class="pilcrow">¶</a></p>
+<p id="section-8.9.1-5">["categories", {}, "text", "INTERNET,IETF,INDUSTRY"]
+~~~~~~~~~~~~<a href="#section-8.9.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="note-property">
@@ -1800,16 +1797,14 @@ Example:
           <h4 id="name-note-property">
 <a href="#section-8.9.2" class="section-number selfRef">8.9.2. </a><a href="#name-note-property" class="section-name selfRef">"note" Property</a>
           </h4>
-<p id="section-8.9.2-1">The "note" property has the intent of specifying supplemental information or a comment about the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.2" class="relref">Section 6.7.2</a></span>.<a href="#section-8.9.2-1" class="pilcrow">¶</a></p>
+<p id="section-8.9.2-1">The "note" property specifies supplemental information or a comment about the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.2" class="relref">Section 6.7.2</a></span>.<a href="#section-8.9.2-1" class="pilcrow">¶</a></p>
 <p id="section-8.9.2-2">Value type:  A single text value.<a href="#section-8.9.2-2" class="pilcrow">¶</a></p>
 <p id="section-8.9.2-3">Cardinality:  *<a href="#section-8.9.2-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.9.2-4">
-<pre>
-Example:
+<p id="section-8.9.2-4">Example:
+~~~~~~~~~~~~
 ["note", {}, "text", "This fax number is operational 0800 to 1715
              EST\, Mon-Fri."]
-</pre><a href="#section-8.9.2-4" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.9.2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sound-property">
@@ -1817,20 +1812,17 @@ Example:
           <h4 id="name-sound-property">
 <a href="#section-8.9.3" class="section-number selfRef">8.9.3. </a><a href="#name-sound-property" class="section-name selfRef">"sound" Property</a>
           </h4>
-<p id="section-8.9.3-1">The "sound" property has the intent of specifying a digital sound content information that annotates some aspect of the object the jCard represents. This property is often used to specify the proper pronunciation of the name property value of the jCard. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.5" class="relref">Section 6.7.5</a></span>.<a href="#section-8.9.3-1" class="pilcrow">¶</a></p>
+<p id="section-8.9.3-1">The "sound" property specifies digital sound content information that annotates some aspect of the object the jCard represents. This property is often used to specify the proper pronunciation of the name property value of the jCard. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.5" class="relref">Section 6.7.5</a></span>.<a href="#section-8.9.3-1" class="pilcrow">¶</a></p>
 <p id="section-8.9.3-2">Value type:  A single URI.<a href="#section-8.9.3-2" class="pilcrow">¶</a></p>
 <p id="section-8.9.3-3">Cardinality:  *<a href="#section-8.9.3-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.9.3-4">
-<pre>
-Example:
-["sound", {}, "uri", "http://www.example.com/pub/logos/abccorp.mp3"]
-
-["sound", {}, "uri", "data:audio/basic;base64,MIICajCCAdOgAwIBAgICBE
+<p id="section-8.9.3-4">Example:
+~~~~~~~~~~~~
+["sound", {}, "uri", "https://www.example.com/pub/logos/abccorp.mp3"]<a href="#section-8.9.3-4" class="pilcrow">¶</a></p>
+<p id="section-8.9.3-5">["sound", {}, "uri", "data:audio/basic;base64,MIICajCCAdOgAwIBAgICBE
       AQEEBQAwdzELMAkGA1UEBhMCVVMxLDAqBgNVBAoTI05ldHNjYXBlIENvbW11bm
       ljYXRpb25zIENvcnBvcmF0aW9uMRwwGgYDVQQLExNJbmZvcm1hdGlvbiBTeXN0
       &lt;...the remainder of base64-encoded data...&gt;"]
-</pre><a href="#section-8.9.3-4" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.9.3-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="uid-property">
@@ -1838,15 +1830,13 @@ Example:
           <h4 id="name-uid-property">
 <a href="#section-8.9.4" class="section-number selfRef">8.9.4. </a><a href="#name-uid-property" class="section-name selfRef">"uid" Property</a>
           </h4>
-<p id="section-8.9.4-1">The "uid" property has the intent of specifying a globally unique identifier corresponding to the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.6" class="relref">Section 6.7.6</a></span>.<a href="#section-8.9.4-1" class="pilcrow">¶</a></p>
+<p id="section-8.9.4-1">The "uid" property specifies a globally unique identifier corresponding to the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.6" class="relref">Section 6.7.6</a></span>.<a href="#section-8.9.4-1" class="pilcrow">¶</a></p>
 <p id="section-8.9.4-2">Value type:  A single URI value.  It MAY also be reset to free-form text.<a href="#section-8.9.4-2" class="pilcrow">¶</a></p>
 <p id="section-8.9.4-3">Cardinality: *1<a href="#section-8.9.4-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.9.4-4">
-<pre>
-Example:
+<p id="section-8.9.4-4">Example:
+~~~~~~~~~~~~
 ["uid", {}, "uri", "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6"]
-</pre><a href="#section-8.9.4-4" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.9.4-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="url-property">
@@ -1854,16 +1844,14 @@ Example:
           <h4 id="name-url-property">
 <a href="#section-8.9.5" class="section-number selfRef">8.9.5. </a><a href="#name-url-property" class="section-name selfRef">"url" Property</a>
           </h4>
-<p id="section-8.9.5-1">The "url" property has the intent of specifying a uniform resource locator associated with the object the jCard represents. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.8" class="relref">Section 6.7.8</a></span>.<a href="#section-8.9.5-1" class="pilcrow">¶</a></p>
-<p id="section-8.9.5-2">There is potential security and privacy implications of providing URLs with telephone calls. The end client receiving a jCard with a URL property MUST only display the URL and not automatically follow the URL or provide automatic preview of the URL, and generally provide good practices in making it clear to the user it is their choice to follow the URL in a browser context consistent with all of the common browser security and privacy practices available on most consumer OS environments.<a href="#section-8.9.5-2" class="pilcrow">¶</a></p>
+<p id="section-8.9.5-1">The "url" property specifies a uniform resource locator associated with the object the jCard represents. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.8" class="relref">Section 6.7.8</a></span>.<a href="#section-8.9.5-1" class="pilcrow">¶</a></p>
+<p id="section-8.9.5-2">There are potential security and privacy implications of providing URLs with telephone calls. The end client receiving a jCard with a "url" property MUST only display the URL and not automatically follow the URL or provide automatic preview of the URL, and generally provide good practices in making it clear to the user it is their choice to follow the URL in a browser context consistent with all of the common browser security and privacy practices available on most consumer OS environments.<a href="#section-8.9.5-2" class="pilcrow">¶</a></p>
 <p id="section-8.9.5-3">Value type:  A single uri value.<a href="#section-8.9.5-3" class="pilcrow">¶</a></p>
 <p id="section-8.9.5-4">Cardinality:  *<a href="#section-8.9.5-4" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.9.5-5">
-<pre>
-Example:
+<p id="section-8.9.5-5">Example:
+~~~~~~~~~~~~
 ["url", {}, "uri", "https://example.org/french-rest/chezchic.html"]
-</pre><a href="#section-8.9.5-5" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.9.5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="version-property">
@@ -1871,15 +1859,13 @@ Example:
           <h4 id="name-version-property">
 <a href="#section-8.9.6" class="section-number selfRef">8.9.6. </a><a href="#name-version-property" class="section-name selfRef">"version" Property</a>
           </h4>
-<p id="section-8.9.6-1">The "version" property MUST be included and is intended to specify the version of the vCard specification used to format this vCard. Reference <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.9" class="relref">Section 6.7.9</a></span>.<a href="#section-8.9.6-1" class="pilcrow">¶</a></p>
+<p id="section-8.9.6-1">The "version" property MUST be included and is intended to specify the version of the vCard specification used to format this vCard. Reference: <span>[<a href="#RFC6350" class="cite xref">RFC6350</a>], <a href="https://rfc-editor.org/rfc/rfc6350#section-6.7.9" class="relref">Section 6.7.9</a></span>.<a href="#section-8.9.6-1" class="pilcrow">¶</a></p>
 <p id="section-8.9.6-2">Value type:  A single text value.<a href="#section-8.9.6-2" class="pilcrow">¶</a></p>
 <p id="section-8.9.6-3">Cardinality:  1<a href="#section-8.9.6-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-8.9.6-4">
-<pre>
-Example:
+<p id="section-8.9.6-4">Example:
+~~~~~~~~~~~~
 ["version", {}, "text", "4.0"]
-</pre><a href="#section-8.9.6-4" class="pilcrow">¶</a>
-</div>
+~~~~~~~~~~~~<a href="#section-8.9.6-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
