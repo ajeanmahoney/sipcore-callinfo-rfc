@@ -595,7 +595,7 @@ Example:
 
 # Extension of jCard
 
-Part of the intent of the usage of jCard is that it has its own extensibility properties where new properties can be defined to relay newly defined information related to a caller.  This capability is inherently supported as part of standard extensibility.  However, usage of those new properties should be published and registered following {{RFC7095, Section 3.6}} or new specifications.
+Part of the intent of using jCard is to leverage its extensibility to define new properties to relay new information related to a caller.  This capability is inherently supported as part of standard extensibility.  However, usage of those new properties should be published and registered following {{RFC7095, Section 3.6}} or new specifications.
 
 # IANA Considerations {#IANA}
 
