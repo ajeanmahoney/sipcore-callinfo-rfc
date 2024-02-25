@@ -658,28 +658,27 @@ Table of Contents
 
 8.6.  Communications Properties
 
-   These properties describe information about how to communicate with
-   the object the jCard represents.
+   These properties describe how to communicate with the object the
+   jCard represents.
 
 8.6.1.  "tel" Property
 
-   The "tel" property has the intent of providing the telephone number
-   for telephony communication of the object the jCard represents.
-   Reference [RFC6350], Section 6.4.1.
+   The "tel" property provides the telephone number for the object the
+   jCard represents.  Reference: [RFC6350], Section 6.4.1.
 
-   Relative to the SIP From header field value this information may
-   provide alternate telephone number or other related telephone numbers
-   for other uses.
+   Relative to the SIP From header field value, this information may
+   provide an alternate telephone number or other related telephone
+   numbers for other uses.
 
    It is important to note that any of the potential instances of the
    "tel" property should not be considered part of the authentication or
    verification part of STIR [RFC8224] or required to match the "orig"
-   claim in the PASSporT [RFC8225].  These telephone numbers should be
-   considered for contact, fax, or other purposes aligned with the
-   general usage of jCard and vCard, although consideration of confusing
-   the caller with different contact telephone number information versus
-   the actual verified telephone number should be made from a general
-   policy point of view.
+   claim in the PASSporT [RFC8225].  These telephone numbers can be for
+   contact, fax, or other purposes aligned with the general usage of
+   jCard and vCard, but the potential confusion of the callee when
+   provided with multiple telephone numbers versus the actual, verified
+   telephone number should be considered from a general policy point of
+   view.
 
    Value type: By default, it is a single free-form text value (for
    backward compatibility with vCard 3), but it SHOULD be reset to a URI
@@ -688,39 +687,37 @@ Table of Contents
 
    Cardinality: *
 
-   Example:
-   ["tel", { "type": ["voice", "text", "cell"], "pref": "1" }, "uri",
-     "tel:+1-202-555-1000"]
-   ["tel", { "type": ["fax"] }, "uri", "tel:+1-202-555-1001"]
+   Example: ~~~~~~~~~~~~ ["tel", { "type": ["voice", "text", "cell"],
+   "pref": "1" }, "uri", "tel:+1-202-555-1000"] ["tel", { "type":
+   ["fax"] }, "uri", "tel:+1-202-555-1001"] ~~~~~~~~~~~~
 
 8.6.2.  "email" Property
 
-   The "email" property has the intent of providing the electronic mail
-   address for communication of the object the jCard represents.
-   Reference [RFC6350], Section 6.4.2.
+   The "email" property provides the electronic mail address of the
+   object the jCard represents.  Reference: [RFC6350], Section 6.4.2.
 
    Value type: A single text value.
 
    Cardinality: *
 
-   Example:
-   ["email", {"type":"work"}, "text", "jqpublic@xyz.example.com"]
-   ["email", {"pref":"1"}, "text", "jane_doe@example.com"]
+   Example: ~~~~~~~~~~~~ ["email", {"type":"work"}, "text",
+   "jqpublic@xyz.example.com"] ["email", {"pref":"1"}, "text",
+   "jane_doe@example.com"] ~~~~~~~~~~~~
 
 8.6.3.  "lang" Property
 
-   The "lang" property has the intent of providing the language(s) that
-   may be used for contacting of the object the jCard represents.
-   Reference [RFC6350], Section 6.4.4.
+   The "lang" property provides the language(s) that may be used for
+   communicating with the object the jCard represents.  Reference:
+   [RFC6350], Section 6.4.4.
 
    Value type: A single language-tag value.
 
    Cardinality: *
 
-   Example:
-   ["lang", {"type":"work", "pref":"1"}, "language-tag", "en"]
-   ["lang", {"type":"work", "pref":"2"}, "language-tag", "fr"]
-   ["lang", {"type":"home"}, "language-tag", "fr"]
+   Example: ~~~~~~~~~~~~ ["lang", {"type":"work", "pref":"1"},
+   "language-tag", "en"] ["lang", {"type":"work", "pref":"2"},
+   "language-tag", "fr"] ["lang", {"type":"home"}, "language-tag", "fr"]
+   ~~~~~~~~~~~~
 
 8.7.  Geographical Properties
 
