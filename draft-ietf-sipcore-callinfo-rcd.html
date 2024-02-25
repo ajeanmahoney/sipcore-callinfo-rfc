@@ -1926,8 +1926,8 @@ Example:
       <h2 id="name-security-considerations">
 <a href="#section-11" class="section-number selfRef">11. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-11-1">Revealing information such as the name, location, and affiliation of a person necessarily entails certain privacy risks. SIP and Call-Info has no particular confidentiality requirement, as the information sent in SIP is in the clear anyway. Transport-level security can be used to hide information from eavesdroppers, and the same confidentiality mechanisms would protect any Call-Info or jCard information carried or referred to in SIP.<a href="#section-11-1" class="pilcrow">¶</a></p>
-<p id="section-11-2">The security framework of signing and providing integrity to this data should be followed <span>[<a href="#I-D.ietf-stir-passport-rcd" class="cite xref">I-D.ietf-stir-passport-rcd</a>]</span>, with the idea that the use of constraints and other certificate based associations should be considered. This includes considerations around information about the calling party being generally constant vs per call data being more temporal. This also includes the relationship that certificates with constraints presents to how they relate to each other and how that information is managed, protected, and associated with the correct call corresponding to a calling party.<a href="#section-11-2" class="pilcrow">¶</a></p>
+<p id="section-11-1">Revealing information such as the name, location, and affiliation of a person necessarily entails certain privacy risks. The SIP Call-Info header field has no particular confidentiality requirement, as the information sent in SIP is in the clear anyway. Transport-level security can be used to hide information from eavesdroppers, and the same confidentiality mechanisms would protect any Call-Info or jCard information carried or referred to in SIP.<a href="#section-11-1" class="pilcrow">¶</a></p>
+<p id="section-11-2">The security framework of signing and providing integrity to this data <span>[<a href="#I-D.ietf-stir-passport-rcd" class="cite xref">I-D.ietf-stir-passport-rcd</a>]</span> should be followed, and the use of constraints and other certificate-based associations should be considered. This includes considerations for information about the calling party, which is generally constant, versus per-call data, which is more transient. This also includes the relationship that certificates with constraints presents to how they relate to each other and how that information is managed, protected, and associated with the correct call corresponding to a calling party.<a href="#section-11-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-normative-references">
@@ -2016,7 +2016,7 @@ Example:
       <h2 id="name-acknowledgements">
 <a href="#name-acknowledgements" class="section-name selfRef">Acknowledgements</a>
       </h2>
-<p id="appendix-A-1">We would like to thank David Hancock, Alec Fenichel and other members of the SIPCORE and STIR working group for helpful suggestions and comments for the creation of this draft.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-A-1">We would like to thank David Hancock, Alec Fenichel, and other members of the SIPCORE and STIR working groups for their helpful suggestions and comments during the creation of this document.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
