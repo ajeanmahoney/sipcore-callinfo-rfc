@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-25T00:45:32.921311+00:00",
+  "timestamp": "2024-02-27T00:41:35.104864+00:00",
   "repo": "ajeanmahoney/sipcore-callinfo-rfc",
   "labels": [
     {
@@ -641,234 +641,378 @@
       "id": "PR_kwDOKSSJls5l7A-9",
       "title": "Section 8.2 copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/17",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Please review carefully because of the normative text.",
       "createdAt": "2024-02-03T17:37:16Z",
-      "updatedAt": "2024-02-03T17:37:16Z",
+      "updatedAt": "2024-02-25T21:14:13Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "section-8.2-copyedit",
       "headRefOid": "4d069ac4f576b31112633b868cf8ade733ba5a63",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:14:13Z",
+      "mergedAt": "2024-02-25T21:14:13Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "7200ced9cee20a0d23ee9075d90691959ade42d0"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO-fX",
+          "commit": {
+            "abbreviatedOid": "4d069ac"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:13:50Z",
+          "updatedAt": "2024-02-25T21:13:50Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 18,
       "id": "PR_kwDOKSSJls5l7Czn",
       "title": "Section 8.3-8.4 copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/18",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-03T18:04:46Z",
-      "updatedAt": "2024-02-03T18:04:46Z",
+      "updatedAt": "2024-02-25T21:16:08Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "section-8.3-8.4-copyedit",
       "headRefOid": "90172e419ee24cc92fc52655cf1da0fbf034c682",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:16:08Z",
+      "mergedAt": "2024-02-25T21:16:08Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "fde583c3797b445fecd1da99eabaf7f8466f665c"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO-kT",
+          "commit": {
+            "abbreviatedOid": "90172e4"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:16:02Z",
+          "updatedAt": "2024-02-25T21:16:02Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 19,
       "id": "PR_kwDOKSSJls5l7DZh",
       "title": "Section 8.5 copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/19",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-03T18:13:14Z",
-      "updatedAt": "2024-02-03T18:13:14Z",
+      "updatedAt": "2024-02-25T21:18:22Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "section-8.5-copyedit",
       "headRefOid": "4fe7bd2908375ed96dcd5b694cf7a943d00dfd00",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:18:21Z",
+      "mergedAt": "2024-02-25T21:18:21Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "394824b539055b4b6166a4bb0f14ed489c6acd2f"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO-pv",
+          "commit": {
+            "abbreviatedOid": "4fe7bd2"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:18:16Z",
+          "updatedAt": "2024-02-25T21:18:16Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 20,
       "id": "PR_kwDOKSSJls5l7F-J",
       "title": "Section 8.6 copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/20",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-03T18:37:24Z",
-      "updatedAt": "2024-02-03T18:37:24Z",
+      "updatedAt": "2024-02-25T21:19:48Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "section-8.6-copyedit",
       "headRefOid": "609589047c47412e77e2370c22f967823b414713",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:19:48Z",
+      "mergedAt": "2024-02-25T21:19:48Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "06414f6d187a9757caab64c3d09924cdadb74e3e"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO-sN",
+          "commit": {
+            "abbreviatedOid": "6095890"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:19:16Z",
+          "updatedAt": "2024-02-25T21:19:16Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 21,
       "id": "PR_kwDOKSSJls5l7Gio",
       "title": "Section 8.7 copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/21",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-03T18:47:31Z",
-      "updatedAt": "2024-02-03T18:47:31Z",
+      "updatedAt": "2024-02-25T21:44:34Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "section-8.7-copyedit",
       "headRefOid": "d47b9c0f9e09b9dc3bc976030827d75b85a3c96e",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:44:34Z",
+      "mergedAt": "2024-02-25T21:44:33Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "4d200c09ce9232cc66d3521ce77ff96d9b33af03"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO_sV",
+          "commit": {
+            "abbreviatedOid": "d47b9c0"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:44:29Z",
+          "updatedAt": "2024-02-25T21:44:29Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 22,
       "id": "PR_kwDOKSSJls5l7H2w",
       "title": "Section 8.9 copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/22",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-03T19:10:43Z",
-      "updatedAt": "2024-02-03T19:10:43Z",
+      "updatedAt": "2024-02-25T21:45:56Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "section-8.9-copyedit",
       "headRefOid": "885d8d8320f73d612432745228659e21c6d482c5",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:45:56Z",
+      "mergedAt": "2024-02-25T21:45:56Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "a2296d703067d8442fb60660780eb79f2a1b1156"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO_vq",
+          "commit": {
+            "abbreviatedOid": "885d8d8"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:45:50Z",
+          "updatedAt": "2024-02-25T21:45:50Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 23,
       "id": "PR_kwDOKSSJls5l7I8c",
       "title": "Section 9 copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/23",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-03T19:29:10Z",
-      "updatedAt": "2024-02-03T19:29:10Z",
+      "updatedAt": "2024-02-25T21:46:39Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "section-9-copyedit",
       "headRefOid": "ae35ae1ce2d461afd4158ea2c6d9ee895aa80b69",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:46:39Z",
+      "mergedAt": "2024-02-25T21:46:39Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "79bf2801ddf9c5aa4425ffabb53ffa204653e11c"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO_xj",
+          "commit": {
+            "abbreviatedOid": "ae35ae1"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:46:34Z",
+          "updatedAt": "2024-02-25T21:46:34Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 24,
       "id": "PR_kwDOKSSJls5l7Jm2",
       "title": "IANA Considerations copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/24",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-03T19:40:42Z",
-      "updatedAt": "2024-02-03T19:40:42Z",
+      "updatedAt": "2024-02-25T21:49:24Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "section-iana-copyedit",
       "headRefOid": "3eba47c6f116e5b50ce18bc1d1a6ceaf78b8f297",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:49:24Z",
+      "mergedAt": "2024-02-25T21:49:24Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "d26f7a499d64b0b73dc2297334eb19857b4f5005"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO_4-",
+          "commit": {
+            "abbreviatedOid": "3eba47c"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:49:18Z",
+          "updatedAt": "2024-02-25T21:49:18Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 25,
       "id": "PR_kwDOKSSJls5l7KyB",
       "title": "Sec Con and Acks copyedit",
       "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/pull/25",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ajeanmahoney",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-02-03T20:02:31Z",
-      "updatedAt": "2024-02-03T20:02:31Z",
+      "updatedAt": "2024-02-25T21:50:19Z",
       "baseRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "baseRefName": "main",
       "baseRefOid": "e3cc064c9862064ea54de98294c6585aba603cd6",
       "headRepository": "ajeanmahoney/sipcore-callinfo-rfc",
       "headRefName": "sec-con-acks-copyedit",
       "headRefOid": "03129e91f1fa9cd709c16a818ad68b21c80597e2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-02-25T21:50:19Z",
+      "mergedAt": "2024-02-25T21:50:19Z",
+      "mergedBy": "chriswendt",
+      "mergeCommit": {
+        "oid": "5ded2adf3cef56294170508b6071ba98e454ca70"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKSSJls5xO_7W",
+          "commit": {
+            "abbreviatedOid": "03129e9"
+          },
+          "author": "chriswendt",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-02-25T21:50:14Z",
+          "updatedAt": "2024-02-25T21:50:14Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
