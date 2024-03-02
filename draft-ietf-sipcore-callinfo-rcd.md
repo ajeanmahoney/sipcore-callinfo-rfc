@@ -1,7 +1,7 @@
 ---
 title: SIP Call-Info Parameters for Rich Call Data
 abbrev: Call-Info Rich Call Data
-docname: draft-ietf-sipcore-callinfo-rcd-latest
+docname: draft-ietf-sipcore-callinfo-rcd-09
 submissiontype: IETF
 category: std
 
@@ -19,7 +19,7 @@ author:
   ins: C. Wendt
   name: Chris Wendt
   org: Somos Inc.
-  email: chris-ietf@chriswendt.net
+  email: chris@appliedbits.com
   country: US
 -
   ins: J. Peterson
@@ -170,8 +170,8 @@ Via: SIP/2.0/TLS pc33.atlanta.example.com;branch=z9hG4bKnashds8
 To: Alice <sip:alice@example.com>
 From: Bob <sip:12155551000@example.com;user=phone>;tag=1928301774>
 Call-ID: a84b4c76e66710
-Call-Info: <cid:12155551000@example.com>;purpose=rcd-jcard;call-reason=
-  "Rendezvous for Little Nellie"
+Call-Info: <cid:12155551000@example.com>;purpose=rcd-jcard;
+  call-reason="Rendezvous for Little Nellie"
 CSeq: 314159 INVITE
 Max-Forwards: 70
 Date: Fri, 25 Sep 2015 19:12:25 GMT
@@ -286,8 +286,8 @@ Value type:  A single text value.
 
 Cardinality:  1*
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["fn", {}, "text", "Mr. John Q. Public\, Esq."]
 ~~~~~~~~~~~~
 
@@ -299,8 +299,8 @@ Value type:  A single structured text value. Each component can have multiple va
 
 Cardinality:  *1
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["n", {}, "text", "Public;John;Quinlan;Mr.;Esq."]
 ["n", {}, "text", "Stevenson;John;Philip,Paul;Dr.;Jr.,M.D.,A.C.P."]
 ~~~~~~~~~~~~
@@ -313,8 +313,8 @@ Value type:  One or more text values separated by a COMMA character (U+002C).
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["nickname", {}, "text", "Robbie"]
 ["nickname", {}, "text", "Jim,Jimmie"]
 ["nickname", {}, "text", "TYPE=work:Boss"]
@@ -330,8 +330,8 @@ Value type:  A single URI.
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["photo", {}, "uri", "http://www.example.com/jqpublic-256x256.png"]
 ~~~~~~~~~~~~
 
@@ -347,8 +347,8 @@ Value type:  A single structured text value separated by the SEMICOLON character
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["adr", {"type":"work"}, "text",
   ["", "", "3100 Massachusetts Avenue NW", "Washington", "DC",
   "20008", "USA"]
@@ -370,8 +370,8 @@ Value type:  By default, it is a single free-form text value (for backward compa
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["tel", { "type": ["voice", "text", "cell"], "pref": "1" }, "uri",
   "tel:+1-202-555-1000"]
 ["tel", { "type": ["fax"] }, "uri", "tel:+1-202-555-1001"]
@@ -385,8 +385,8 @@ Value type: A single text value.
 
 Cardinality: *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["email", {"type":"work"}, "text", "jqpublic@xyz.example.com"]
 ["email", {"pref":"1"}, "text", "jane_doe@example.com"]
 ~~~~~~~~~~~~
@@ -399,8 +399,8 @@ Value type:  A single language-tag value.
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["lang", {"type":"work", "pref":"1"}, "language-tag", "en"]
 ["lang", {"type":"work", "pref":"2"}, "language-tag", "fr"]
 ["lang", {"type":"home"}, "language-tag", "fr"]
@@ -421,8 +421,8 @@ Value type:  The default is a single text value.  It can also be
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["tz", {}, "text", "Raleigh/North America"]
 ~~~~~~~~~~~~
 
@@ -434,8 +434,8 @@ Value type:  A single URI.
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["geo", {}, "uri", "geo:37.386013,-122.082932"]
 ~~~~~~~~~~~~
 
@@ -513,8 +513,8 @@ Value type:  One or more text values separated by a COMMA character
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["categories", {}, "text", "TRAVEL AGENT"]
 
 ["categories", {}, "text", "INTERNET,IETF,INDUSTRY"]
@@ -528,8 +528,8 @@ Value type:  A single text value.
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["note", {}, "text", "This fax number is operational 0800 to 1715
              EST\, Mon-Fri."]
 ~~~~~~~~~~~~
@@ -542,8 +542,8 @@ Value type:  A single URI.
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["sound", {}, "uri", "https://www.example.com/pub/logos/abccorp.mp3"]
 
 ["sound", {}, "uri", "data:audio/basic;base64,MIICajCCAdOgAwIBAgICBE
@@ -560,8 +560,8 @@ Value type:  A single URI value.  It MAY also be reset to free-form text.
 
 Cardinality: *1
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["uid", {}, "uri", "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6"]
 ~~~~~~~~~~~~
 
@@ -575,8 +575,8 @@ Value type:  A single uri value.
 
 Cardinality:  *
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["url", {}, "uri", "https://example.org/french-rest/chezchic.html"]
 ~~~~~~~~~~~~
 
@@ -588,8 +588,8 @@ Value type:  A single text value.
 
 Cardinality:  1
 
-Example:
 ~~~~~~~~~~~~
+Example:
 ["version", {}, "text", "4.0"]
 ~~~~~~~~~~~~
 
@@ -604,11 +604,11 @@ Part of the intent of using jCard is to leverage its extensibility to define new
 This document defines the token "rcd-jcard" as a new value for the 'purpose' parameter of the Call-Info header field in the "Header Field Parameters and Parameter Values" registry defined by {{RFC3968}}.
 
 ~~~~~~~
-  +--------------+----------------+-------------------+----------------+
-  | Header Field | Parameter Name | Predefined Values | Reference      |
-  +--------------+----------------+-------------------+----------------+
-  | Call-Info    | purpose        | Yes               | [this RFC]     |
-  +--------------+----------------+-------------------+----------------+
+  +--------------+----------------+-------------------+------------+
+  | Header Field | Parameter Name | Predefined Values | Reference  |
+  +--------------+----------------+-------------------+------------+
+  | Call-Info    | purpose        | Yes               | [this RFC] |
+  +--------------+----------------+-------------------+------------+
 ~~~~~~~
 
 ## SIP Call-Info Header Field 'call-reason' Parameter
@@ -616,11 +616,11 @@ This document defines the token "rcd-jcard" as a new value for the 'purpose' par
 This document defines the 'call-reason' generic parameter for use as a new parameter in the Call-Info header field in the "Header Field Parameters and Parameter Values" registry defined by {{RFC3968}}. The parameter's token is "call-reason", and it takes the value of a quoted string.
 
 ~~~~~~~
-  +--------------+----------------+-------------------+----------------+
-  | Header Field | Parameter Name | Predefined Values | Reference      |
-  +--------------+----------------+-------------------+----------------+
-  | Call-Info    | call-reason    | No                | [this RFC]     |
-  +--------------+----------------+-------------------+----------------+
+  +--------------+----------------+-------------------+------------+
+  | Header Field | Parameter Name | Predefined Values | Reference  |
+  +--------------+----------------+-------------------+------------+
+  | Call-Info    | call-reason    | No                | [this RFC] |
+  +--------------+----------------+-------------------+------------+
 ~~~~~~~
 
 # Security Considerations {#Security}
