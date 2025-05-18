@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-15T01:04:30.826670+00:00",
+  "timestamp": "2025-05-18T01:11:57.407461+00:00",
   "repo": "ajeanmahoney/sipcore-callinfo-rfc",
   "labels": [
     {
@@ -49,7 +49,34 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 26,
+      "id": "I_kwDOKSSJls628W_y",
+      "title": "Create a roadmap",
+      "url": "https://github.com/ajeanmahoney/sipcore-callinfo-rfc/issues/26",
+      "state": "CLOSED",
+      "author": "ajeanmahoney",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "ajeanmahoney"
+      ],
+      "labels": [],
+      "body": "A bullet list is suggested, but perhaps a GH board will work.",
+      "createdAt": "2025-05-16T15:11:45Z",
+      "updatedAt": "2025-05-16T15:12:48Z",
+      "closedAt": "2025-05-16T15:12:48Z",
+      "comments": [
+        {
+          "author": "ajeanmahoney",
+          "authorAssociation": "OWNER",
+          "body": "This issue landed in an unexpected place. ",
+          "createdAt": "2025-05-16T15:12:48Z",
+          "updatedAt": "2025-05-16T15:12:48Z"
+        }
+      ]
+    }
+  ],
   "pulls": [
     {
       "number": 1,
